@@ -14,6 +14,11 @@ on:
 permissions:
   contents: write
 
+# never let two refreshes race on the same branch
+concurrency:
+  group: profile-art
+  cancel-in-progress: false
+
 jobs:
   refresh:
     runs-on: ubuntu-latest
@@ -35,6 +40,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --rebase --autostash origin main
           git add assets README.md
           if git diff --staged --quiet; then
             echo "nothing changed"
