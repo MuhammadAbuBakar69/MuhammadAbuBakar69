@@ -74,12 +74,6 @@ abubakar@github ~ $ whoami --verbose
 
 <br>
 
-<h3><code>abubakar@github ~ $ ./tested.sh</code></h3>
-
-<a href="https://leetcode.com/Abu-Bakar06"><img src="https://leetcard.jacoblin.cool/Abu-Bakar06?theme=dark&font=Fira%20Code&ext=heatmap" alt="LeetCode stats" /></a>
-
-<br>
-
 <h3><code>abubakar@github ~ $ ./snake.sh</code></h3>
 
 <picture>
