@@ -113,9 +113,17 @@ def main() -> None:
     make_heatmap_svg.render(days, stats["login"], os.path.join(ASSETS, "contrib-heatmap.svg"))
     cards.render_stats(stats, os.path.join(ASSETS, "stats.svg"))
     try:
-        portrait = make_ascii_svg.to_ascii_lines(gh.get_avatar(user["avatar_url"]))
+        # A photo dropped in assets/photo.* beats the avatar: the avatar is only
+        # 460px, so a real camera file is the only way to get finer ASCII detail.
+        photo = next(
+            (os.path.join(ASSETS, n) for n in ("photo.jpg", "photo.jpeg", "photo.png", "photo.webp")
+             if os.path.exists(os.path.join(ASSETS, n))),
+            None,
+        )
+        source = open(photo, "rb").read() if photo else gh.get_avatar(user["avatar_url"])
+        portrait = make_ascii_svg.to_ascii_lines(source)
         cards.render_portrait(portrait, stats["name"], stats["login"], os.path.join(ASSETS, "portrait.svg"))
-        print("ok: portrait rebuilt from the profile picture")
+        print(f"ok: portrait rebuilt from {os.path.basename(photo) if photo else 'the profile picture'}")
     except Exception as exc:  # keep the previous portrait rather than fail the build
         print(f"skip: portrait not rebuilt ({exc})")
     with open(os.path.join(ASSETS, "data.json"), "w", encoding="utf-8") as fh:

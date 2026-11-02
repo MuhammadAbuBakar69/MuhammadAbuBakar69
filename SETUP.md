@@ -104,3 +104,10 @@ python scripts/make_ascii_svg.py my-photo.jpg assets/portrait.svg --width 60
 `make_ascii_svg.py` finds the face with OpenCV (cascade model in `scripts/model/`)
 and centres the crop on it, so you do not have to pre-crop anything. Commit the new
 `assets/portrait.svg` and the daily job will leave it alone.
+
+### Higher-resolution portrait
+
+The GitHub avatar is capped at 460px, which is the real limit on how much detail
+the ASCII portrait can show. Drop a camera file at `assets/photo.jpg` (or `.png`,
+`.webp`) and `build.py` uses it instead of the avatar, at whatever resolution the
+file has. Below roughly 1200px the face stops gaining detail.

@@ -17,7 +17,7 @@ from html import escape
 RAMP = " .:-=+*#%@"  # index by luminance: bright pixels get the densest glyph
 MODEL = os.path.join(os.path.dirname(os.path.abspath(__file__)), "model", "haarcascade_frontalface_default.xml")
 BG = "#0d1117"
-INK = "#39d353"
+INK = "#dfe6f0"  # near-white ink; the chrome stays green
 
 
 def _face_box(grey):
@@ -42,7 +42,7 @@ def _face_box(grey):
     return int(x), int(y), int(w), int(h)
 
 
-def to_ascii_lines(data: bytes, cols: int = 60, rows: int = 36) -> list[str]:
+def to_ascii_lines(data: bytes, cols: int = 66, rows: int = 40) -> list[str]:
     """Render image bytes as rows of monospace characters."""
     from PIL import Image, ImageEnhance, ImageFilter, ImageOps  # noqa: PLC0415
 
@@ -52,7 +52,7 @@ def to_ascii_lines(data: bytes, cols: int = 60, rows: int = 36) -> list[str]:
     if box:
         x, y, w, h = box
         cx, cy = x + w // 2, y + h // 2
-        span = int(w * 1.3)  # head plus a little shoulder
+        span = int(w * 1.45)  # head and shoulders, like a portrait bust
         span = min(span, side)
         left = max(0, min(cx - span // 2, grey.width - span))
         top = max(0, min(cy - span // 2, grey.height - span))
@@ -60,11 +60,26 @@ def to_ascii_lines(data: bytes, cols: int = 60, rows: int = 36) -> list[str]:
         span = side
         left, top = (grey.width - side) // 2, int((grey.height - side) * 0.25)
 
-    tile = grey.crop((left, top, left + span, top + span)).resize((cols, rows), Image.LANCZOS)
+    tile = grey.crop((left, top, left + span, top + span)).resize((cols * 3, rows * 3), Image.LANCZOS)
+
+    # Local contrast first (CLAHE) so eyes, nose and mouth survive a small crop,
+    # then an edge-preserving smoothing pass so grain does not become noise.
+    try:
+        import cv2  # noqa: PLC0415
+        import numpy as np  # noqa: PLC0415
+
+        arr = np.array(tile)
+        arr = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8)).apply(arr)
+        arr = cv2.bilateralFilter(arr, 9, 60, 60)
+        tile = Image.fromarray(arr)
+    except Exception:
+        pass
+
+    tile = tile.resize((cols, rows), Image.LANCZOS)
     tile = ImageOps.autocontrast(tile, cutoff=1)
-    tile = tile.point(lambda v: int(255 * ((v / 255) ** 0.85)))  # lift the shadows
-    tile = tile.filter(ImageFilter.UnsharpMask(radius=1.4, percent=150, threshold=2))
-    tile = ImageEnhance.Contrast(tile).enhance(1.15)
+    tile = tile.point(lambda v: int(255 * ((v / 255) ** 1.0)))
+    tile = tile.filter(ImageFilter.UnsharpMask(radius=1.5, percent=150, threshold=2))
+    tile = ImageEnhance.Contrast(tile).enhance(1.05)
 
     pixels = tile.tobytes()
     return ["".join(RAMP[min(9, p * 10 // 256)] for p in pixels[r * cols : (r + 1) * cols]) for r in range(rows)]

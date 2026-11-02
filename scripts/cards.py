@@ -13,6 +13,7 @@ FG = "#e6edf3"
 MUTED = "#8b949e"
 DIM = "#484f58"
 ACCENT = "#39d353"
+INK = "#dfe6f0"  # portrait ink: near-white, like the reference window
 DOTS = ("#ff5f56", "#ffbd2e", "#27c93f")
 FONT = "ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace"
 
@@ -165,12 +166,13 @@ def render_portrait(lines: list[str], name: str, login: str, out_path: str) -> s
     line_h = area_h / rows
     font = round(min(line_h * 0.94, area_w / cols / 0.6), 2)
 
+    art_x = area_x + max(0.0, (area_w - cols * font * 0.6) / 2)
     out.append(
-        f'<text xml:space="preserve" font-family="{FONT}" font-size="{font}" fill="{ACCENT}">'
+        f'<text xml:space="preserve" font-family="{FONT}" font-size="{font}" fill="{INK}">'
     )
     for r, line in enumerate(lines):
         y = area_y + (r + 1) * line_h - (line_h - font) / 2
-        out.append(f'<tspan x="{area_x}" y="{y:.1f}">{escape(line)}</tspan>')
+        out.append(f'<tspan x="{art_x:.1f}" y="{y:.1f}">{escape(line)}</tspan>')
     out.append("</text>")
 
     out.append(
