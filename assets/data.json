@@ -1,13 +1,14 @@
 {
   "login": "MuhammadAbuBakar69",
   "name": "Muhammad  Abu-Bakar",
-  "contributions": 885,
+  "contributions": 887,
   "current_streak": 1,
   "longest_streak": 31,
   "repos": 65,
   "stars": 4,
   "followers": 0,
   "languages": {
+    "Python": 1,
     "TypeScript": 5,
     "JavaScript": 39,
     "HTML": 10,
@@ -43,18 +44,18 @@
       "url": "https://github.com/MuhammadAbuBakar69/Festivity"
     },
     {
+      "name": "MuhammadAbuBakar69",
+      "description": "Profile setup",
+      "language": "Python",
+      "stars": 0,
+      "url": "https://github.com/MuhammadAbuBakar69/MuhammadAbuBakar69"
+    },
+    {
       "name": "Power-Digitizing",
       "description": "new design",
       "language": "TypeScript",
       "stars": 0,
       "url": "https://github.com/MuhammadAbuBakar69/Power-Digitizing"
-    },
-    {
-      "name": "expense-splitter",
-      "description": "Split bills among friends \u2014 track who owes what",
-      "language": "JavaScript",
-      "stars": 0,
-      "url": "https://github.com/MuhammadAbuBakar69/expense-splitter"
     }
   ],
   "built": "2026-11-02"
