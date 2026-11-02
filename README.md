@@ -1,39 +1,52 @@
-<h1 align="center">Hi, I'm Muhammad Abu-Bakar 👋</h1>
-<h3 align="center">Senior Developer • AI Automation Engineer • Full-Stack & Vibe Coder 🚀</h3>
+<div align="center">
 
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=61DAFB&center=true&vCenter=true&width=650&lines=Building+AI-powered+web+products;React+%2B+Next.js+%2B+Node.js+%2B+AI;Vibe+Coding+with+Cursor+%26+AI+Agents;Shipping+fast%2C+shipping+clean" alt="Typing SVG" />
-</p>
+<!-- Generated art below is rebuilt by .github/workflows/update-profile-art.yml
+     every morning. Run `python scripts/build.py --user MuhammadAbuBakar69` by hand to refresh. -->
 
-<p align="center">
-  <a href="https://withabubakar.netlify.app/"><img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white" /></a>
-  <a href="https://www.linkedin.com/in/mohamad-abubakar/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-  <a href="mailto:md.bakar2006@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
-  <a href="https://instagram.com/abubakar_ayub_"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" /></a>
-</p>
+<h3><code>abubakar@github ~ $ ./contributions.sh</code></h3>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Vibe%20Coder-AI%20Assisted%20Dev-8A2BE2?style=for-the-badge&logo=sparkles&logoColor=white" />
-  <img src="https://img.shields.io/badge/Status-Open%20to%20Work-success?style=for-the-badge" />
-  <img src="https://komarev.com/ghpvc/?username=MuhammadAbuBakar69&style=for-the-badge&color=blueviolet&label=Profile+Views" />
-</p>
+<img src="./assets/contrib-heatmap.svg" width="845" alt="Contribution graph, refreshed daily from the GitHub API" />
 
----
+<br>
+<br>
 
-### 👋 About Me
+<h3><code>abubakar@github ~ $ whoami</code></h3>
 
-I'm a Software Developer and AI-Focused Web Engineer who loves building modern, scalable, user-focused digital products. I specialize in full-stack web development — React, Next.js, TypeScript, Node.js, and MongoDB — with a growing focus on **AI-assisted ("vibe") coding**: shipping fast, well-architected products using AI copilots, automation, and intelligent systems.
+<table>
+<tr>
+<td valign="top"><img src="./assets/ascii-portrait.svg" width="405" alt="ASCII portrait" /></td>
+<td valign="top"><img src="./assets/stats.svg" width="405" alt="GitHub stats, refreshed daily" /></td>
+</tr>
+</table>
 
-Currently building projects that combine AI + web apps + smart UX — things like resume analyzers, AI chatbots, and commerce platforms with automated pipelines end to end.
+<br>
+<br>
 
-- 🔭 Currently working on AI automation & full-stack SaaS products
-- 🌱 Deepening skills in AI agent workflows, LLM integration, and system architecture
-- ⚡ Vibe coding daily with Cursor / AI copilots — ship fast, refine faster
-- 📫 Reach me: md.bakar2006@gmail.com
+<h3><code>abubakar@github ~ $ cat about.md</code></h3>
 
----
+<p><b>Full-Stack &nbsp;·&nbsp; AI Automation Engineer</b></p>
 
-### 💻 Tech Stack
+</div>
+
+```bash
+abubakar@github ~ $ whoami --verbose
+
+  Name       Muhammad Abu-Bakar
+  Role       Senior Developer · AI Automation Engineer · Vibe Coder
+  Stack      React · Next.js · TypeScript · Node.js · Express · MongoDB
+  Frontend   Tailwind · Framer Motion · Three.js · Vue · Vite · Figma
+  Backend    Supabase · Firebase · Appwrite · MySQL · Socket.io
+  AI         OpenAI · Gemini · LangChain · n8n · LLM agents & RAG
+  Building   AI-powered products — resume screening, chatbots,
+             commerce platforms with automated pipelines
+  Writing    Vibe coding daily with Cursor and AI copilots
+  Status     Open to work
+  Portfolio  withabubakar.netlify.app
+```
+
+<div align="center">
+
+<h3><code>abubakar@github ~ $ ./stack.sh</code></h3>
 
 **Frontend**
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) ![Vue.js](https://img.shields.io/badge/vue.js-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D) ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white) ![Tailwind](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white) ![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white) ![Framer](https://img.shields.io/badge/Framer-black?style=for-the-badge&logo=framer&logoColor=blue) ![Three js](https://img.shields.io/badge/threejs-black?style=for-the-badge&logo=three.js&logoColor=white)
@@ -45,49 +58,54 @@ Currently building projects that combine AI + web apps + smart UX — things lik
 ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white) ![Gemini](https://img.shields.io/badge/Gemini-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white) ![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white) ![n8n](https://img.shields.io/badge/n8n-EA4B71?style=for-the-badge&logo=n8n&logoColor=white)
 
 **Tools & Platforms**
-![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![VS Code](https://img.shields.io/badge/VS%20Code-0078D4?style=for-the-badge&logo=visualstudiocode&logoColor=white) ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white) ![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7) ![Render](https://img.shields.io/badge/Render-%2346E3B7.svg?style=for-the-badge&logo=render&logoColor=white) ![Stripe](https://img.shields.io/badge/Stripe-626CD9?style=for-the-badge&logo=stripe&logoColor=white) ![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white) ![Selenium](https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&logo=selenium&logoColor=white)
+![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![VS Code](https://img.shields.io/badge/VS%20Code-0078D4?style=for-the-badge&logo=visualstudiocode&logoColor=white) ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white) ![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7) ![Render](https://img.shields.io/badge/Render-%2346E3B7.svg?style=for-the-badge&logo=render&logoColor=white) ![Stripe](https://img.shields.io/badge/Stripe-626CD9?style=for-the-badge&logo=stripe&logoColor=white) ![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
 
----
+<br>
 
-### 📊 GitHub Stats
+<h3><code>abubakar@github ~ $ ./featured.sh</code></h3>
 
-<p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=MuhammadAbuBakar69&show_icons=true&theme=radical&hide_border=true&count_private=true" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MuhammadAbuBakar69&layout=compact&theme=radical&hide_border=true" />
-</p>
+<!-- featured:start -->
 
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=MuhammadAbuBakar69&theme=radical&hide_border=true" />
-</p>
+| Project | What it does | Stack | Stars |
+| :--- | :--- | :--- | ---: |
+| **[Resumind](https://github.com/MuhammadAbuBakar69/Resumind)** | ATS Checker | JavaScript | 1 |
+| **[booking-system](https://github.com/MuhammadAbuBakar69/booking-system)** | Booking system with calendar and availability | JavaScript | 1 |
+| **[github-analyzer](https://github.com/MuhammadAbuBakar69/github-analyzer)** | GitHub profile analyzer with stats via GitHub API | JavaScript | 1 |
+| **[Festivity](https://github.com/MuhammadAbuBakar69/Festivity)** | Awwward Winning Website | CSS | 1 |
+| **[Power-Digitizing](https://github.com/MuhammadAbuBakar69/Power-Digitizing)** | new design | TypeScript | 0 |
+| **[expense-splitter](https://github.com/MuhammadAbuBakar69/expense-splitter)** | Split bills among friends — track who owes what | JavaScript | 0 |
 
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=MuhammadAbuBakar69&theme=radical&no-frame=true&row=1&column=7" />
-</p>
+<!-- featured:end -->
 
-### 🧠 LeetCode Stats
+<br>
 
-<!--
-  Swap Abu-Bakar06 below once confirmed — using leetcard.jacoblin.cool (reliable, actively maintained)
--->
-<p align="center">
-  <img src="https://leetcard.jacoblin.cool/Abu-Bakar06?theme=dark&font=Fira%20Code&ext=heatmap" />
-</p>
+<h3><code>abubakar@github ~ $ ./tested.sh</code></h3>
 
-### 🔥 Contribution Graph
+<a href="https://leetcode.com/Abu-Bakar06"><img src="https://leetcard.jacoblin.cool/Abu-Bakar06?theme=dark&font=Fira%20Code&ext=heatmap" alt="LeetCode stats" /></a>
 
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=MuhammadAbuBakar69&theme=react-dark&hide_border=true" />
-</p>
+<br>
 
----
-
-
-### 🐍 Contribution Snake
+<h3><code>abubakar@github ~ $ ./snake.sh</code></h3>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MuhammadAbuBakar69/MuhammadAbuBakar69/output/github-contribution-grid-snake-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/MuhammadAbuBakar69/MuhammadAbuBakar69/output/github-contribution-grid-snake.svg">
-  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/MuhammadAbuBakar69/MuhammadAbuBakar69/output/github-contribution-grid-snake.gif">
+  <img alt="contribution snake" src="https://raw.githubusercontent.com/MuhammadAbuBakar69/MuhammadAbuBakar69/output/github-contribution-grid-snake.svg">
 </picture>
 
-<p align="center"><i>⚡ Building fast with code + AI. Always shipping.</i></p>
+<br>
+<br>
+
+<h3><code>abubakar@github ~ $ ./links.sh</code></h3>
+
+[![Portfolio](https://img.shields.io/badge/Portfolio-withabubakar.netlify.app-0d1117?style=for-the-badge&logo=vercel&logoColor=white)](https://withabubakar.netlify.app/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-mohamad--abubakar-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mohamad-abubakar/)
+[![Email](https://img.shields.io/badge/Email-md.bakar2006%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:md.bakar2006@gmail.com)
+[![Instagram](https://img.shields.io/badge/Instagram-abubakar__ayub__-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/abubakar_ayub_)
+
+<br>
+
+<i>This README maintains itself. The graph, streaks and language stats are pulled
+from the GitHub API every morning, so the numbers are always current.</i>
+
+</div>

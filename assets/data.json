@@ -1,0 +1,61 @@
+{
+  "login": "MuhammadAbuBakar69",
+  "name": "Muhammad  Abu-Bakar",
+  "contributions": 885,
+  "current_streak": 1,
+  "longest_streak": 31,
+  "repos": 65,
+  "stars": 4,
+  "followers": 0,
+  "languages": {
+    "TypeScript": 5,
+    "JavaScript": 39,
+    "HTML": 10,
+    "CSS": 4
+  },
+  "top_repos": [
+    {
+      "name": "Resumind",
+      "description": "ATS Checker",
+      "language": "JavaScript",
+      "stars": 1,
+      "url": "https://github.com/MuhammadAbuBakar69/Resumind"
+    },
+    {
+      "name": "booking-system",
+      "description": "Booking system with calendar and availability",
+      "language": "JavaScript",
+      "stars": 1,
+      "url": "https://github.com/MuhammadAbuBakar69/booking-system"
+    },
+    {
+      "name": "github-analyzer",
+      "description": "GitHub profile analyzer with stats via GitHub API",
+      "language": "JavaScript",
+      "stars": 1,
+      "url": "https://github.com/MuhammadAbuBakar69/github-analyzer"
+    },
+    {
+      "name": "Festivity",
+      "description": "Awwward Winning Website",
+      "language": "CSS",
+      "stars": 1,
+      "url": "https://github.com/MuhammadAbuBakar69/Festivity"
+    },
+    {
+      "name": "Power-Digitizing",
+      "description": "new design",
+      "language": "TypeScript",
+      "stars": 0,
+      "url": "https://github.com/MuhammadAbuBakar69/Power-Digitizing"
+    },
+    {
+      "name": "expense-splitter",
+      "description": "Split bills among friends \u2014 track who owes what",
+      "language": "JavaScript",
+      "stars": 0,
+      "url": "https://github.com/MuhammadAbuBakar69/expense-splitter"
+    }
+  ],
+  "built": "2026-11-02"
+}
