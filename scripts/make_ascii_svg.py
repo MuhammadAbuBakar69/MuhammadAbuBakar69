@@ -42,6 +42,18 @@ def _face_box(grey):
     return int(x), int(y), int(w), int(h)
 
 
+def _vignette(cols: int, rows: int, rx: float = 0.46, ry: float = 0.60, feather: float = 0.26):
+    """Soft elliptical mask: bright over the head, fading to black at the sides."""
+    import numpy as np  # noqa: PLC0415
+    from PIL import Image  # noqa: PLC0415
+
+    yy, xx = np.mgrid[0:rows, 0:cols]
+    cx, cy = (cols - 1) / 2.0, rows * 0.44
+    radius = np.sqrt(((xx - cx) / (cols * rx)) ** 2 + ((yy - cy) / (rows * ry)) ** 2)
+    mask = np.clip((1.0 - radius) / feather, 0.0, 1.0)
+    return Image.fromarray((mask * 255).astype("uint8"))
+
+
 def to_ascii_lines(data: bytes, cols: int = 66, rows: int = 40) -> list[str]:
     """Render image bytes as rows of monospace characters."""
     from PIL import Image, ImageEnhance, ImageFilter, ImageOps  # noqa: PLC0415
@@ -51,9 +63,8 @@ def to_ascii_lines(data: bytes, cols: int = 66, rows: int = 40) -> list[str]:
     box = _face_box(grey)
     if box:
         x, y, w, h = box
-        cx, cy = x + w // 2, y + h // 2
-        span = int(w * 1.45)  # head and shoulders, like a portrait bust
-        span = min(span, side)
+        cx, cy = x + w // 2, y + h // 2 + int(h * 0.08)  # nudge down to keep the chin
+        span = min(int(w * 1.18), side)  # tight head shot, like the reference
         left = max(0, min(cx - span // 2, grey.width - span))
         top = max(0, min(cy - span // 2, grey.height - span))
     else:
@@ -76,6 +87,13 @@ def to_ascii_lines(data: bytes, cols: int = 66, rows: int = 40) -> list[str]:
         pass
 
     tile = tile.resize((cols, rows), Image.LANCZOS)
+
+    # Vignette: fade everything outside an ellipse around the head to nothing, so
+    # the photo's background never shows up as clutter down the sides.
+    import numpy as np  # noqa: PLC0415
+
+    masked = np.array(tile).astype(np.float32) * (np.array(_vignette(cols, rows)).astype(np.float32) / 255.0)
+    tile = Image.fromarray(masked.astype("uint8"))
     tile = ImageOps.autocontrast(tile, cutoff=1)
     tile = tile.point(lambda v: int(255 * ((v / 255) ** 1.0)))
     tile = tile.filter(ImageFilter.UnsharpMask(radius=1.5, percent=150, threshold=2))
