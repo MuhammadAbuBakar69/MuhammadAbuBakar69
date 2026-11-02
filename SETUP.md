@@ -76,3 +76,31 @@ scripts/make_ascii_svg.py     photo -> ASCII SVG
 - The stats card counts only your own non-forked repos.
 - Colours live in `PALETTE` in `scripts/make_heatmap_svg.py` if you want a
   different accent than GitHub green.
+
+## The three panes
+
+| Asset | Script | What it is |
+| :--- | :--- | :--- |
+| `assets/contrib-heatmap.svg` | `scripts/make_heatmap_svg.py` | Day-by-day contribution grid, animated column by column |
+| `assets/portrait.svg` | `scripts/make_ascii_svg.py` + `scripts/cards.py` | Your profile picture as ASCII, cropped on the face |
+| `assets/stats.svg` | `scripts/cards.py` | Six stat boxes plus a contributions-per-month chart |
+
+All three share one terminal-window frame (`cards.chrome`) so they read as panes of
+the same terminal. Rebuild everything with:
+
+```bash
+python scripts/build.py --user <your-login>
+```
+
+### Swapping in a better photo
+
+The portrait is only as good as the picture. Drop a head-and-shoulders shot in and
+rebuild:
+
+```bash
+python scripts/make_ascii_svg.py my-photo.jpg assets/portrait.svg --width 60
+```
+
+`make_ascii_svg.py` finds the face with OpenCV (cascade model in `scripts/model/`)
+and centres the crop on it, so you do not have to pre-crop anything. Commit the new
+`assets/portrait.svg` and the daily job will leave it alone.

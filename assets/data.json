@@ -58,5 +58,78 @@
       "url": "https://github.com/MuhammadAbuBakar69/Power-Digitizing"
     }
   ],
+  "active_days": 267,
+  "total_days": 366,
+  "avg_active": 3.3258426966292136,
+  "best_day": {
+    "count": 190,
+    "label": "Aug 11"
+  },
+  "monthly": [
+    {
+      "label": "D",
+      "year": 2025,
+      "count": 55
+    },
+    {
+      "label": "J",
+      "year": 2026,
+      "count": 54
+    },
+    {
+      "label": "F",
+      "year": 2026,
+      "count": 63
+    },
+    {
+      "label": "M",
+      "year": 2026,
+      "count": 67
+    },
+    {
+      "label": "A",
+      "year": 2026,
+      "count": 64
+    },
+    {
+      "label": "M",
+      "year": 2026,
+      "count": 67
+    },
+    {
+      "label": "J",
+      "year": 2026,
+      "count": 52
+    },
+    {
+      "label": "J",
+      "year": 2026,
+      "count": 78
+    },
+    {
+      "label": "A",
+      "year": 2026,
+      "count": 268
+    },
+    {
+      "label": "S",
+      "year": 2026,
+      "count": 0
+    },
+    {
+      "label": "O",
+      "year": 2026,
+      "count": 61
+    },
+    {
+      "label": "N",
+      "year": 2026,
+      "count": 4
+    }
+  ],
+  "current_start": "2026-11-02",
+  "current_end": "2026-11-02",
+  "longest_start": "2026-04-26",
+  "longest_end": "2026-05-26",
   "built": "2026-11-02"
 }

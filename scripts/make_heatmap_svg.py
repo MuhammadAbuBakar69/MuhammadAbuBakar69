@@ -4,6 +4,8 @@ from __future__ import annotations
 from datetime import date, timedelta
 from html import escape
 
+import cards
+
 PALETTE = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"]
 BG = "#0d1117"
 FG = "#7d8590"
@@ -11,7 +13,7 @@ ACCENT = "#39d353"
 MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 
 CELL, GAP = 12, 3
-PAD_LEFT, PAD_TOP, PAD_RIGHT, PAD_BOTTOM = 34, 56, 16, 36
+PAD_LEFT, PAD_TOP, PAD_RIGHT, PAD_BOTTOM = 34, 62, 16, 38
 
 
 def _level(count: int, top: int) -> int:
@@ -59,10 +61,8 @@ def render(days: dict[date, int], user: str, out_path: str) -> str:
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" '
         f'viewBox="0 0 {width} {height}" role="img" '
         f'aria-label="{escape(user)} GitHub contribution graph">',
-        f'<rect width="{width}" height="{height}" rx="12" fill="{BG}"/>',
-        f'<text x="{PAD_LEFT}" y="20" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" '
-        f'font-size="12" fill="{ACCENT}">{total:,} contributions in the last year</text>',
     ]
+    out += cards.chrome(width, height, "./contributions.sh", right=f"{total:,} contributions", user=user)
 
     # month labels
     seen: set[int] = set()

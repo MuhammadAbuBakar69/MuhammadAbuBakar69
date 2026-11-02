@@ -1,25 +1,20 @@
 <div align="center">
 
-<!-- Generated art below is rebuilt by .github/workflows/update-profile-art.yml
-     every morning. Run `python scripts/build.py --user MuhammadAbuBakar69` by hand to refresh. -->
-
-<h3><code>abubakar@github ~ $ ./contributions.sh</code></h3>
+<!-- The three panes below are rebuilt by .github/workflows/update-profile-art.yml
+     every morning: heatmap, ASCII portrait and stat card all come from the GitHub API. -->
 
 <img src="./assets/contrib-heatmap.svg" width="845" alt="Contribution graph, refreshed daily from the GitHub API" />
 
 <br>
 <br>
 
-<h3><code>abubakar@github ~ $ whoami</code></h3>
-
 <table>
 <tr>
-<td valign="top"><img src="./assets/ascii-portrait.svg" width="405" alt="ASCII portrait" /></td>
-<td valign="top"><img src="./assets/stats.svg" width="405" alt="GitHub stats, refreshed daily" /></td>
+<td valign="top"><img src="./assets/portrait.svg" width="440" alt="ASCII portrait" /></td>
+<td valign="top"><img src="./assets/stats.svg" width="440" alt="GitHub stats, refreshed daily" /></td>
 </tr>
 </table>
 
-<br>
 <br>
 
 <h3><code>abubakar@github ~ $ cat about.md</code></h3>

@@ -125,3 +125,65 @@ def top_repos(repos: list[dict], n: int = 6) -> list[dict]:
     own = [r for r in repos if not r.get("fork") and not r.get("archived")]
     own.sort(key=lambda r: (r.get("stargazers_count", 0), r.get("updated_at", "")), reverse=True)
     return own[:n]
+
+
+MONTH_INITIALS = ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"]
+
+
+def streak_detail(days: dict[date, int], today: date | None = None) -> dict:
+    """Current and longest streak with the dates they span."""
+    today = today or date.today()
+    active = sorted(d for d, c in days.items() if c > 0)
+    empty = {
+        "current": 0, "current_start": None, "current_end": None,
+        "longest": 0, "longest_start": None, "longest_end": None,
+    }
+    if not active:
+        return empty
+
+    best = (1, active[0], active[0])
+    run, run_start, prev = 1, active[0], active[0]
+    for cur in active[1:]:
+        if (cur - prev).days == 1:
+            run += 1
+        else:
+            run, run_start = 1, cur
+        if run > best[0]:
+            best = (run, run_start, cur)
+        prev = cur
+
+    cursor = today if days.get(today, 0) > 0 else today - timedelta(days=1)
+    end = cursor
+    current = 0
+    while days.get(cursor, 0) > 0:
+        current += 1
+        cursor -= timedelta(days=1)
+
+    return {
+        "current": current,
+        "current_start": cursor + timedelta(days=1) if current else None,
+        "current_end": end if current else None,
+        "longest": best[0],
+        "longest_start": best[1],
+        "longest_end": best[2],
+    }
+
+
+def monthly(days: dict[date, int], count: int = 12) -> list[dict]:
+    """Contribution totals for the last `count` months, oldest first."""
+    buckets: dict[tuple[int, int], int] = {}
+    for day, value in days.items():
+        key = (day.year, day.month)
+        buckets[key] = buckets.get(key, 0) + value
+    keys = sorted(buckets)[-count:]
+    return [
+        {"label": MONTH_INITIALS[m - 1], "year": y, "count": buckets[(y, m)]}
+        for y, m in keys
+    ]
+
+
+def get_avatar(url: str) -> bytes:
+    """Download the profile picture so the portrait can be rebuilt headlessly."""
+    req = urllib.request.Request(url, headers={"User-Agent": UA})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return r.read()
