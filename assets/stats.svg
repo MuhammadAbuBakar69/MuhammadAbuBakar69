@@ -17,7 +17,7 @@
 <text x="247" y="108" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10" fill="#484f58">Apr 26 – May 26</text>
 <rect x="18" y="124" width="207" height="68" rx="8" fill="#11161d" stroke="#30363d"/>
 <text x="30" y="142" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10.5" fill="#8b949e">$ contributions</text>
-<text x="30" y="166" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="21" font-weight="600" fill="#e6edf3">890</text>
+<text x="30" y="166" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="21" font-weight="600" fill="#e6edf3">891</text>
 <text x="30" y="182" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10" fill="#484f58">in the last year</text>
 <rect x="235" y="124" width="207" height="68" rx="8" fill="#11161d" stroke="#30363d"/>
 <text x="247" y="142" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10.5" fill="#8b949e">$ active days</text>
@@ -55,7 +55,7 @@
 <text x="353.7" y="476.0" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10" fill="#8b949e">S</text>
 <rect x="378.0" y="427.0" width="21.9" height="31.0" rx="3" fill="#39d353"/>
 <text x="389.0" y="476.0" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10" fill="#8b949e">O</text>
-<rect x="413.4" y="455.0" width="21.9" height="3.0" rx="3" fill="#39d353"/>
+<rect x="413.4" y="454.4" width="21.9" height="3.6" rx="3" fill="#39d353"/>
 <text x="424.3" y="476.0" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10" fill="#8b949e">N</text>
 <line x1="18" y1="458" x2="442" y2="458" stroke="#30363d"/>
 </svg>
