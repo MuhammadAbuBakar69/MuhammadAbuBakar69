@@ -17,7 +17,26 @@ from datetime import date, datetime, timedelta
 
 API = "https://api.github.com"
 UA = "profile-readme-builder"
-TOKEN = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN") or ""
+def _github_token() -> str:
+    """Only ever return something that looks like a GitHub token.
+
+    Other tools in this workspace export secrets as bare environment variables, and
+    a mis-named one (say a model-provider key sitting in GITHUB_TOKEN) must not be
+    sent to api.github.com - it just 401s and breaks the whole build.
+    """
+    candidates = (
+        os.environ.get("GITHUB_ACCESS_TOKEN", ""),
+        os.environ.get("GH_TOKEN", ""),
+        os.environ.get("GITHUB_TOKEN", ""),
+    )
+    for value in candidates:
+        value = (value or "").strip()
+        if value.startswith(("ghp_", "gho_", "ghs_", "ghu_", "github_pat_")):
+            return value
+    return ""
+
+
+TOKEN = _github_token()
 
 
 def _get(url: str) -> tuple[str, dict]:
