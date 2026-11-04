@@ -1,14 +1,14 @@
 {
   "login": "MuhammadAbuBakar69",
   "name": "Muhammad  Abu-Bakar",
-  "contributions": 903,
-  "current_streak": 2,
+  "contributions": 932,
+  "current_streak": 3,
   "longest_streak": 31,
-  "repos": 66,
+  "repos": 67,
   "stars": 4,
   "followers": 0,
   "languages": {
-    "Python": 2,
+    "Python": 3,
     "TypeScript": 5,
     "JavaScript": 39,
     "HTML": 10,
@@ -44,23 +44,23 @@
       "url": "https://github.com/MuhammadAbuBakar69/Festivity"
     },
     {
-      "name": "MuhammadAbuBakar69",
-      "description": "Profile setup",
+      "name": "threadmind-ai",
+      "description": "Autonomous textile factory intelligence platform: fabric defect vision, predictive maintenance, evidence-grounded root cause analysis, and a five-agent LangGraph orchestrator. Research baseline v1.0.",
       "language": "Python",
       "stars": 0,
-      "url": "https://github.com/MuhammadAbuBakar69/MuhammadAbuBakar69"
+      "url": "https://github.com/MuhammadAbuBakar69/threadmind-ai"
     },
     {
-      "name": "jobpilot",
-      "description": "Track job applications from raw posting text. Optional LLM extractor, SQLite store, FastAPI endpoints, zero-network test suite.",
-      "language": "Python",
+      "name": "Power-Digitizing",
+      "description": "new design",
+      "language": "TypeScript",
       "stars": 0,
-      "url": "https://github.com/MuhammadAbuBakar69/jobpilot"
+      "url": "https://github.com/MuhammadAbuBakar69/Power-Digitizing"
     }
   ],
-  "active_days": 268,
-  "total_days": 367,
-  "avg_active": 3.3694029850746268,
+  "active_days": 269,
+  "total_days": 368,
+  "avg_active": 3.4646840148698885,
   "best_day": {
     "count": 190,
     "label": "Aug 11"
@@ -124,12 +124,12 @@
     {
       "label": "N",
       "year": 2026,
-      "count": 19
+      "count": 48
     }
   ],
   "current_start": "2026-11-02",
-  "current_end": "2026-11-03",
+  "current_end": "2026-11-04",
   "longest_start": "2026-04-26",
   "longest_end": "2026-05-26",
-  "built": "2026-11-03"
+  "built": "2026-11-04"
 }
