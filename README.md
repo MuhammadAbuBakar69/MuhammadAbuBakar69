@@ -67,8 +67,8 @@ abubakar@github ~ $ whoami --verbose
 | **[booking-system](https://github.com/MuhammadAbuBakar69/booking-system)** | Booking system with calendar and availability | JavaScript | 1 |
 | **[github-analyzer](https://github.com/MuhammadAbuBakar69/github-analyzer)** | GitHub profile analyzer with stats via GitHub API | JavaScript | 1 |
 | **[Festivity](https://github.com/MuhammadAbuBakar69/Festivity)** | Awwward Winning Website | CSS | 1 |
-| **[threadmind-ai](https://github.com/MuhammadAbuBakar69/threadmind-ai)** | Autonomous textile factory intelligence platform: fabric defect vision, predictive main... | Python | 0 |
 | **[Power-Digitizing](https://github.com/MuhammadAbuBakar69/Power-Digitizing)** | new design | TypeScript | 0 |
+| **[MuhammadAbuBakar69](https://github.com/MuhammadAbuBakar69/MuhammadAbuBakar69)** | Profile setup | Python | 0 |
 
 <!-- featured:end -->
 
