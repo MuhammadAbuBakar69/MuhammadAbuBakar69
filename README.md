@@ -67,8 +67,8 @@ abubakar@github ~ $ whoami --verbose
 | **[booking-system](https://github.com/MuhammadAbuBakar69/booking-system)** | Booking system with calendar and availability | JavaScript | 1 |
 | **[github-analyzer](https://github.com/MuhammadAbuBakar69/github-analyzer)** | GitHub profile analyzer with stats via GitHub API | JavaScript | 1 |
 | **[Festivity](https://github.com/MuhammadAbuBakar69/Festivity)** | Awwward Winning Website | CSS | 1 |
-| **[otto](https://github.com/MuhammadAbuBakar69/otto)** | Autonomous outreach agent with a $0 model bill. No API keys, no subscriptions, no accou... | Python | 0 |
 | **[MuhammadAbuBakar69](https://github.com/MuhammadAbuBakar69/MuhammadAbuBakar69)** | Profile setup | Python | 0 |
+| **[otto](https://github.com/MuhammadAbuBakar69/otto)** | Autonomous outreach agent with a $0 model bill. No API keys, no subscriptions, no accou... | Python | 0 |
 
 <!-- featured:end -->
 

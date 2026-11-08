@@ -1,8 +1,8 @@
 {
   "login": "MuhammadAbuBakar69",
   "name": "Muhammad  Abu-Bakar",
-  "contributions": 949,
-  "current_streak": 5,
+  "contributions": 931,
+  "current_streak": 0,
   "longest_streak": 31,
   "repos": 68,
   "stars": 4,
@@ -44,23 +44,23 @@
       "url": "https://github.com/MuhammadAbuBakar69/Festivity"
     },
     {
-      "name": "otto",
-      "description": "Autonomous outreach agent with a $0 model bill. No API keys, no subscriptions, no accounts. Standard library only.",
-      "language": "Python",
-      "stars": 0,
-      "url": "https://github.com/MuhammadAbuBakar69/otto"
-    },
-    {
       "name": "MuhammadAbuBakar69",
       "description": "Profile setup",
       "language": "Python",
       "stars": 0,
       "url": "https://github.com/MuhammadAbuBakar69/MuhammadAbuBakar69"
+    },
+    {
+      "name": "otto",
+      "description": "Autonomous outreach agent with a $0 model bill. No API keys, no subscriptions, no accounts. Standard library only.",
+      "language": "Python",
+      "stars": 0,
+      "url": "https://github.com/MuhammadAbuBakar69/otto"
     }
   ],
-  "active_days": 271,
-  "total_days": 371,
-  "avg_active": 3.5018450184501844,
+  "active_days": 264,
+  "total_days": 365,
+  "avg_active": 3.5265151515151514,
   "best_day": {
     "count": 190,
     "label": "Aug 11"
@@ -127,9 +127,9 @@
       "count": 65
     }
   ],
-  "current_start": "2026-11-02",
-  "current_end": "2026-11-06",
+  "current_start": null,
+  "current_end": null,
   "longest_start": "2026-04-26",
   "longest_end": "2026-05-26",
-  "built": "2026-11-07"
+  "built": "2026-11-08"
 }
