@@ -21,7 +21,7 @@
 <text x="30" y="182" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10" fill="#484f58">in the last year</text>
 <rect x="235" y="124" width="207" height="68" rx="8" fill="#11161d" stroke="#30363d"/>
 <text x="247" y="142" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10.5" fill="#8b949e">$ active days</text>
-<text x="247" y="166" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="21" font-weight="600" fill="#e6edf3">264 / 365</text>
+<text x="247" y="166" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="21" font-weight="600" fill="#e6edf3">264 / 366</text>
 <text x="247" y="182" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10" fill="#484f58">72% of the year</text>
 <rect x="18" y="198" width="207" height="68" rx="8" fill="#11161d" stroke="#30363d"/>
 <text x="30" y="216" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10.5" fill="#8b949e">$ best day</text>

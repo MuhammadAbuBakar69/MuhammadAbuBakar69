@@ -59,7 +59,7 @@
     }
   ],
   "active_days": 264,
-  "total_days": 365,
+  "total_days": 366,
   "avg_active": 3.5265151515151514,
   "best_day": {
     "count": 190,
@@ -131,5 +131,5 @@
   "current_end": null,
   "longest_start": "2026-04-26",
   "longest_end": "2026-05-26",
-  "built": "2026-11-08"
+  "built": "2026-11-09"
 }
