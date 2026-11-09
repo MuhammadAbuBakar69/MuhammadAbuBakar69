@@ -70,7 +70,48 @@ def _canvas(svg: str, path: str) -> tuple[float, float]:
     return float(m.group(1)), float(m.group(2))
 
 
-def verify(stats_svg: str, portrait_svg: str, login: str) -> list[str]:
+PANELS = {"banner.svg": (1280, 300), "achievements.svg": (1280, 208)}
+
+
+def _panel(name: str, svg: str, login: str) -> list[str]:
+    """Wide panels: same rules as the cards, at their own canvas size."""
+    problems: list[str] = []
+    want_w, want_h = PANELS[name]
+    w, h = _canvas(svg, name)
+    if (w, h) != (want_w, want_h):
+        problems.append(f"{name}: canvas {w}x{h}, expected {want_w}x{want_h}")
+    if not svg.rstrip().endswith("</svg>"):
+        problems.append(f"{name}: truncated file (no closing </svg>)")
+
+    runs = _texts(svg)
+    prompt = re.compile(rf"^{re.escape(login.lower())}@github: ~ \$ \./[a-z]+\.sh$")
+    if not any(prompt.match(_plain(body)) for attrs, body in runs):
+        problems.append(f"{name}: title bar does not carry the standard prompt")
+
+    # Both wide panels are read at 1:1 on a desktop README, so they get the same 28px gutter.
+    left, right = 28, want_w - 28
+    for attrs, body in runs:
+        text = _plain(body)
+        if not text or "x" not in attrs or not attrs.get("font-size"):
+            continue
+        size = float(attrs["font-size"])
+        if size < 9:
+            problems.append(f"{name}: '{text[:28]}' is {size}px, below the 9px floor")
+        x = float(attrs["x"])
+        span = len(text) * size * 0.6
+        anchor = attrs.get("text-anchor", "start")
+        start = x if anchor == "start" else (x - span if anchor == "end" else x - span / 2)
+        if start < left - 0.6 or start + span > right + 0.6:
+            problems.append(f"{name}: '{text[:28]}' breaks the {left}px gutter")
+    return problems
+
+
+def verify(
+    stats_svg: str,
+    portrait_svg: str,
+    login: str,
+    panels: dict[str, str] | None = None,
+) -> list[str]:
     problems: list[str] = []
     prompt = re.compile(rf"^{re.escape(login.lower())}@github: ~ \$ \./[a-z]+\.sh$")
 
@@ -163,11 +204,18 @@ def main() -> int:
     ap.add_argument("stats")
     ap.add_argument("portrait")
     ap.add_argument("--login", required=True)
+    ap.add_argument("--banner", default="")
+    ap.add_argument("--achievements", default="")
     a = ap.parse_args()
+    panels = {}
+    for name, path in (("banner.svg", a.banner), ("achievements.svg", a.achievements)):
+        if path:
+            panels[name] = open(path, encoding="utf-8").read()
     problems = verify(
         open(a.stats, encoding="utf-8").read(),
         open(a.portrait, encoding="utf-8").read(),
         a.login,
+        panels,
     )
     if problems:
         print(f"layout check failed ({len(problems)} problems):", file=sys.stderr)

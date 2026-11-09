@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="208" viewBox="0 0 1280 208" role="img" aria-label="Muhammad Abu-Bakar — achievements">
+<rect x="0.5" y="0.5" width="1279" height="207" rx="12" fill="#0d1117" stroke="#30363d"/>
+<path d="M0 12a12 12 0 0 1 12-12h1256a12 12 0 0 1 12 12v36H0Z" fill="#161b22"/>
+<line x1="0" y1="36" x2="1280" y2="36" stroke="#30363d"/>
+<circle cx="17" cy="18" r="4.6" fill="#ff5f56"/>
+<circle cx="32" cy="18" r="4.6" fill="#ffbd2e"/>
+<circle cx="47" cy="18" r="4.6" fill="#27c93f"/>
+<text x="62.0" y="22.5" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="11.5" fill="#8b949e">muhammadabubakar69@github: ~ $ ./achievements.sh</text>
+<text x="1262.0" y="22.5" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10.5" fill="#484f58" text-anchor="end">--all-time</text>
+<rect x="28.0" y="54" width="194.0" height="96" rx="8" fill="#161b22" stroke="#30363d"/>
+<text x="40.0" y="76.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10" fill="#8b949e">$ contributions</text>
+<text x="40.0" y="110.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="24" fill="#e6edf3" font-weight="700">934</text>
+<text x="88.2" y="110.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10" fill="#484f58">last 12 months</text>
+<text x="40.0" y="128.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="9" fill="#484f58">next milestone 1,000</text>
+<rect x="40.0" y="142" width="170.0" height="3" rx="1.5" fill="#484f58" opacity="0.55"/>
+<rect x="40.0" y="142" width="158.8" height="3" rx="1.5" fill="#39d353"/>
+<rect x="234.0" y="54" width="194.0" height="96" rx="8" fill="#161b22" stroke="#30363d"/>
+<text x="246.0" y="76.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10" fill="#8b949e">$ active days</text>
+<text x="246.0" y="110.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="24" fill="#e6edf3" font-weight="700">265</text>
+<text x="294.2" y="110.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10" fill="#484f58">of 366</text>
+<text x="246.0" y="128.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="9" fill="#484f58">3.5 contributions / active day</text>
+<rect x="246.0" y="142" width="170.0" height="3" rx="1.5" fill="#484f58" opacity="0.55"/>
+<rect x="440.0" y="54" width="194.0" height="96" rx="8" fill="#161b22" stroke="#30363d"/>
+<text x="452.0" y="76.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10" fill="#8b949e">$ longest streak</text>
+<text x="452.0" y="110.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="24" fill="#e6edf3" font-weight="700">31</text>
+<text x="485.8" y="110.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10" fill="#484f58">days</text>
+<text x="452.0" y="128.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="9" fill="#484f58">Apr 26 - May 26</text>
+<rect x="452.0" y="142" width="170.0" height="3" rx="1.5" fill="#484f58" opacity="0.55"/>
+<rect x="646.0" y="54" width="194.0" height="96" rx="8" fill="#161b22" stroke="#30363d"/>
+<text x="658.0" y="76.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10" fill="#8b949e">$ repositories</text>
+<text x="658.0" y="110.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="24" fill="#e6edf3" font-weight="700">68</text>
+<text x="691.8" y="110.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10" fill="#484f58">public</text>
+<text x="658.0" y="128.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="9" fill="#484f58">{&#x27;Python&#x27;: 4, &#x27;TypeScript&#x27;: 5, &#x27;JavaScript&#x27;: 39, &#x27;HTML&#x27;: 10, &#x27;CSS&#x27;: 4} languages</text>
+<rect x="658.0" y="142" width="170.0" height="3" rx="1.5" fill="#484f58" opacity="0.55"/>
+<rect x="852.0" y="54" width="194.0" height="96" rx="8" fill="#161b22" stroke="#30363d"/>
+<text x="864.0" y="76.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10" fill="#8b949e">$ pull requests</text>
+<text x="864.0" y="110.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="24" fill="#e6edf3" font-weight="700">3</text>
+<text x="883.4" y="110.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10" fill="#484f58">merged</text>
+<text x="864.0" y="128.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="9" fill="#484f58">20 issues opened</text>
+<rect x="864.0" y="142" width="170.0" height="3" rx="1.5" fill="#484f58" opacity="0.55"/>
+<rect x="1058.0" y="54" width="194.0" height="96" rx="8" fill="#161b22" stroke="#30363d"/>
+<text x="1070.0" y="76.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10" fill="#8b949e">$ commits</text>
+<text x="1070.0" y="110.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="24" fill="#e6edf3" font-weight="700">862</text>
+<text x="1118.2" y="110.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10" fill="#484f58">in the last year</text>
+<text x="1070.0" y="128.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="9" fill="#484f58">4 PRs · 0 reviews</text>
+<rect x="1070.0" y="142" width="170.0" height="3" rx="1.5" fill="#484f58" opacity="0.55"/>
+<line x1="28" y1="164" x2="1252" y2="164" stroke="#30363d"/>
+<text x="28.0" y="190.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10" fill="#8b949e">computed from the GitHub API · no badges, just numbers</text>
+<text x="1252.0" y="190.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10" fill="#8b949e" text-anchor="end">built 2026-11-09</text>
+</svg>

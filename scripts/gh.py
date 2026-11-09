@@ -206,3 +206,62 @@ def get_avatar(url: str) -> bytes:
     req = urllib.request.Request(url, headers={"User-Agent": UA})
     with urllib.request.urlopen(req, timeout=30) as r:
         return r.read()
+
+
+GRAPHQL = "https://api.github.com/graphql"
+
+
+def _graphql(query: str, variables: dict) -> dict:
+    """POST to the GraphQL API. Returns {} on any failure.
+
+    The profile must still build when this is unavailable: a spent rate limit or a token without
+    scope should cost a few tiles, not the whole page.
+    """
+    if not TOKEN:
+        return {}
+    body = json.dumps({"query": query, "variables": variables}).encode()
+    req = urllib.request.Request(GRAPHQL, data=body, method="POST")
+    req.add_header("User-Agent", UA)
+    req.add_header("Authorization", f"Bearer {TOKEN}")
+    req.add_header("Content-Type", "application/json")
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            payload = json.loads(r.read().decode("utf-8", "replace"))
+    except Exception:
+        return {}
+    if payload.get("errors"):
+        return {}
+    return payload.get("data") or {}
+
+
+WORK_QUERY = """
+query ($login: String!) {
+  user(login: $login) {
+    followers { totalCount }
+    contributionsCollection {
+      totalCommitContributions
+      totalPullRequestContributions
+      totalIssueContributions
+      totalPullRequestReviewContributions
+    }
+    pullRequests(states: MERGED) { totalCount }
+    issues { totalCount }
+  }
+}
+"""
+
+
+def get_work_totals(login: str) -> dict:
+    """All-time work totals. Empty dict when the token or API cannot answer."""
+    data = _graphql(WORK_QUERY, {"login": login}).get("user") or {}
+    if not data:
+        return {}
+    window = data.get("contributionsCollection") or {}
+    return {
+        "merged_prs": (data.get("pullRequests") or {}).get("totalCount", 0),
+        "issues": (data.get("issues") or {}).get("totalCount", 0),
+        "followers": (data.get("followers") or {}).get("totalCount", 0),
+        "commits_year": window.get("totalCommitContributions", 0),
+        "prs_year": window.get("totalPullRequestContributions", 0),
+        "reviews_year": window.get("totalPullRequestReviewContributions", 0),
+    }
