@@ -70,7 +70,7 @@ def _canvas(svg: str, path: str) -> tuple[float, float]:
     return float(m.group(1)), float(m.group(2))
 
 
-PANELS = {"banner.svg": (1280, 300), "achievements.svg": (1280, 208)}
+PANELS = {"banner.svg": (1280, 300), "achievements.svg": (1280, 312)}
 
 
 def _panel(name: str, svg: str, login: str) -> list[str]:
