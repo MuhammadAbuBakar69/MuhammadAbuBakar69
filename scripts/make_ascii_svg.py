@@ -14,7 +14,10 @@ import io
 import os
 from html import escape
 
-RAMP = " .:-=+*#%@"  # index by luminance: bright pixels get the densest glyph
+# Ten glyphs, ordered by ink weight. Bright pixels get denser glyphs: the card is a dark terminal,
+# so a dense glyph reads as light. The ramp deliberately stops short of pure white, which is what
+# keeps a bright face from turning into a solid block of '@'.
+RAMP = " .:-=+*#%@"
 MODEL = os.path.join(os.path.dirname(os.path.abspath(__file__)), "model", "haarcascade_frontalface_default.xml")
 BG = "#0d1117"
 INK = "#dfe6f0"  # near-white ink; the chrome stays green
@@ -99,8 +102,40 @@ def to_ascii_lines(data: bytes, cols: int = 66, rows: int = 40) -> list[str]:
     tile = tile.filter(ImageFilter.UnsharpMask(radius=1.5, percent=150, threshold=2))
     tile = ImageEnhance.Contrast(tile).enhance(1.05)
 
-    pixels = tile.tobytes()
-    return ["".join(RAMP[min(9, p * 10 // 256)] for p in pixels[r * cols : (r + 1) * cols]) for r in range(rows)]
+    # Tone mapping. A portrait lit from the front puts most of the face in the top two glyphs, which
+    # is what makes an ASCII face read as a blob: the eyes and nose disappear inside a field of '@'.
+    # A percentile stretch spreads the ramp across the tones that actually exist in the crop, and a
+    # soft-compressed top keeps the brightest 2% off the densest glyph.
+    import numpy as np  # noqa: PLC0415
+
+    values = np.asarray(tile, dtype=np.float32)
+    lit = values[values > 8]  # ignore the vignetted background when measuring the face
+    if lit.size:
+        lo, hi = np.percentile(lit, 2), np.percentile(lit, 98)
+        if hi - lo < 24:  # a flat crop: fall back to the full range rather than divide by nothing
+            lo, hi = 0.0, 255.0
+    else:
+        lo, hi = 0.0, 255.0
+    scaled = np.clip((values - lo) / max(1.0, hi - lo), 0.0, 1.0)
+
+    # Structure beats brightness. A face lit evenly is a large flat area, and mapping luminance alone
+    # turns it into a solid block: the eyes, nostrils and lips sit inside that block and vanish.
+    # Blending in a gradient term puts ink on edges instead, so features stay readable while flat
+    # skin lands on mid-weight glyphs.
+    gy, gx = np.gradient(scaled)
+    edge = np.hypot(gx, gy)
+    if edge.max() > 0:
+        edge = edge / edge.max()
+    combined = np.clip(0.58 * scaled + 0.42 * edge, 0.0, 1.0) ** 1.12
+
+    idx = np.minimum(len(RAMP) - 1, (combined * len(RAMP)).astype(int))
+    # Cap the densest glyph: reserve '@' for the genuine extremes so the portrait keeps texture.
+    idx = np.where(idx >= len(RAMP) - 1, len(RAMP) - 2, idx)
+
+    flat = idx.reshape(-1)
+    return [
+        "".join(RAMP[int(v)] for v in flat[r * cols : (r + 1) * cols]) for r in range(rows)
+    ]
 
 
 def render(lines: list[str], out_path: str) -> str:

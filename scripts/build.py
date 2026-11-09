@@ -78,9 +78,13 @@ def main() -> None:
     active_days = sum(1 for c in days.values() if c > 0)
     best_day, best_count = max(days.items(), key=lambda kv: (kv[1], kv[0]))
 
+    # " ".join(split()) collapses the double space in the display name on GitHub, which otherwise
+    # lands in the card, the SVG aria-label and the README as a visible typo.
+    display_name = " ".join((user.get("name") or user["login"]).split())
+
     stats = {
         "login": user["login"],
-        "name": user.get("name") or user["login"],
+        "name": display_name,
         "contributions": sum(days.values()),
         "current_streak": current,
         "longest_streak": longest,
@@ -122,12 +126,26 @@ def main() -> None:
         )
         source = open(photo, "rb").read() if photo else gh.get_avatar(user["avatar_url"])
         portrait = make_ascii_svg.to_ascii_lines(source)
-        cards.render_portrait(portrait, stats["name"], stats["login"], os.path.join(ASSETS, "portrait.svg"))
+        cards.render_portrait(
+            portrait, stats["name"], stats["login"], os.path.join(ASSETS, "portrait.svg"), stats
+        )
         print(f"ok: portrait rebuilt from {os.path.basename(photo) if photo else 'the profile picture'}")
     except Exception as exc:  # keep the previous portrait rather than fail the build
         print(f"skip: portrait not rebuilt ({exc})")
     with open(os.path.join(ASSETS, "data.json"), "w", encoding="utf-8") as fh:
         json.dump(stats, fh, indent=2)
+
+    import verify_layout  # noqa: E402  (same directory, imported after the assets exist)
+
+    problems = verify_layout.verify(
+        open(os.path.join(ASSETS, "stats.svg"), encoding="utf-8").read(),
+        open(os.path.join(ASSETS, "portrait.svg"), encoding="utf-8").read(),
+        stats["login"],
+    )
+    if problems:
+        for p in problems:
+            print(f"layout: {p}", file=sys.stderr)
+        raise SystemExit("layout check failed — refusing to publish misaligned art")
 
     if splice_readme(render_featured(stats)):
         print("ok: README featured section refreshed")

@@ -17,14 +17,14 @@
 
 <br>
 
-<h3><code>abubakar@github ~ $ cat about.md</code></h3>
+<h3><code>muhammadabubakar69@github ~ $ cat about.md</code></h3>
 
 <p><b>Full-Stack &nbsp;·&nbsp; AI Automation Engineer</b></p>
 
 </div>
 
 ```bash
-abubakar@github ~ $ whoami --verbose
+muhammadabubakar69@github ~ $ whoami --verbose
 
   Name       Muhammad Abu-Bakar
   Role       Senior Developer · AI Automation Engineer · Vibe Coder
@@ -41,7 +41,7 @@ abubakar@github ~ $ whoami --verbose
 
 <div align="center">
 
-<h3><code>abubakar@github ~ $ ./stack.sh</code></h3>
+<h3><code>muhammadabubakar69@github ~ $ ./stack.sh</code></h3>
 
 **Frontend**
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) ![Vue.js](https://img.shields.io/badge/vue.js-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D) ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white) ![Tailwind](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white) ![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white) ![Framer](https://img.shields.io/badge/Framer-black?style=for-the-badge&logo=framer&logoColor=blue) ![Three js](https://img.shields.io/badge/threejs-black?style=for-the-badge&logo=three.js&logoColor=white)
@@ -57,7 +57,7 @@ abubakar@github ~ $ whoami --verbose
 
 <br>
 
-<h3><code>abubakar@github ~ $ ./featured.sh</code></h3>
+<h3><code>muhammadabubakar69@github ~ $ ./featured.sh</code></h3>
 
 <!-- featured:start -->
 
@@ -67,14 +67,14 @@ abubakar@github ~ $ whoami --verbose
 | **[booking-system](https://github.com/MuhammadAbuBakar69/booking-system)** | Booking system with calendar and availability | JavaScript | 1 |
 | **[github-analyzer](https://github.com/MuhammadAbuBakar69/github-analyzer)** | GitHub profile analyzer with stats via GitHub API | JavaScript | 1 |
 | **[Festivity](https://github.com/MuhammadAbuBakar69/Festivity)** | Awwward Winning Website | CSS | 1 |
+| **[Power-Digitizing](https://github.com/MuhammadAbuBakar69/Power-Digitizing)** | new design | TypeScript | 0 |
 | **[MuhammadAbuBakar69](https://github.com/MuhammadAbuBakar69/MuhammadAbuBakar69)** | Profile setup | Python | 0 |
-| **[otto](https://github.com/MuhammadAbuBakar69/otto)** | Autonomous outreach agent with a $0 model bill. No API keys, no subscriptions, no accou... | Python | 0 |
 
 <!-- featured:end -->
 
 <br>
 
-<h3><code>abubakar@github ~ $ ./snake.sh</code></h3>
+<h3><code>muhammadabubakar69@github ~ $ ./snake.sh</code></h3>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MuhammadAbuBakar69/MuhammadAbuBakar69/output/github-contribution-grid-snake-dark.svg">
@@ -85,7 +85,7 @@ abubakar@github ~ $ whoami --verbose
 <br>
 <br>
 
-<h3><code>abubakar@github ~ $ ./links.sh</code></h3>
+<h3><code>muhammadabubakar69@github ~ $ ./links.sh</code></h3>
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-withabubakar.netlify.app-0d1117?style=for-the-badge&logo=vercel&logoColor=white)](https://withabubakar.netlify.app/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-mohamad--abubakar-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mohamad-abubakar/)
