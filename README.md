@@ -12,6 +12,10 @@
 
 <br>
 
+<img src="./assets/badges.svg" width="1180" alt="GitHub badges and the progress toward each one" />
+
+<br>
+
 <img src="./assets/contrib-heatmap.svg" width="845" alt="Contribution graph, refreshed daily from the GitHub API" />
 
 <br>

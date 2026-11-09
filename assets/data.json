@@ -136,9 +136,16 @@
     "merged_prs": 5,
     "issues": 20,
     "followers": 0,
-    "commits_year": 836,
+    "commits_year": 864,
     "prs_year": 6,
     "reviews_year": 0
   },
+  "badges": {
+    "merged_prs": 5,
+    "merged_repos": 2,
+    "quick_closes": 0,
+    "coauthored": 0
+  },
+  "best_repo_stars": 1,
   "longest_label": "Apr 26 - May 26"
 }

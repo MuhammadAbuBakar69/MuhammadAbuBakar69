@@ -211,6 +211,24 @@ def get_avatar(url: str) -> bytes:
 GRAPHQL = "https://api.github.com/graphql"
 
 
+def _search(query: str, *, kind: str = "issues", per_page: int = 50) -> dict:
+    """Search API. Separate from the REST helpers because search has its own rate limit and,
+    for commits, its own accept header."""
+    import urllib.parse
+
+    accept = "application/vnd.github+json"
+    if kind == "commits":
+        accept = "application/vnd.github.cloak-preview+json"
+    url = f"{API}/search/{kind}?q={urllib.parse.quote(query)}&per_page={per_page}"
+    req = urllib.request.Request(url)
+    req.add_header("User-Agent", UA)
+    req.add_header("Accept", accept)
+    if TOKEN:
+        req.add_header("Authorization", f"Bearer {TOKEN}")
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return json.loads(r.read())
+
+
 def _graphql(query: str, variables: dict) -> dict:
     """POST to the GraphQL API. Returns {} on any failure.
 
@@ -264,4 +282,44 @@ def get_work_totals(login: str) -> dict:
         "commits_year": window.get("totalCommitContributions", 0),
         "prs_year": window.get("totalPullRequestContributions", 0),
         "reviews_year": window.get("totalPullRequestReviewContributions", 0),
+    }
+
+
+def get_badge_stats(login: str) -> dict:
+    """The numbers behind GitHub's own achievement badges.
+
+    GitHub exposes no API for the badges themselves - the sidebar is derived server-side and cannot
+    be read or granted from outside. What it is derived *from* is public, so this collects those
+    inputs: merged pull requests, how many repositories they landed in, the best single-repo star
+    count, co-authored commits, and issues closed quickly.
+
+    Returns {} rather than partial guesses when the search API is unavailable.
+    """
+    try:
+        merged = _search(f"type:pr author:{login} is:merged", per_page=100)
+    except Exception:
+        return {}
+    items = merged.get("items", [])
+    repos = {i["repository_url"].rsplit("/", 1)[-1] for i in items}
+    quick = 0
+    try:
+        closed = _search(f"type:issue author:{login} is:closed", per_page=100)
+        for i in closed.get("items", []):
+            if i.get("closed_at"):
+                opened = datetime.fromisoformat(i["created_at"].replace("Z", "+00:00"))
+                shut = datetime.fromisoformat(i["closed_at"].replace("Z", "+00:00"))
+                if (shut - opened) <= timedelta(minutes=5):
+                    quick += 1
+    except Exception:
+        pass
+    try:
+        co = _search(f"author:{login} Co-authored-by", kind="commits", per_page=1)
+        coauthored = co.get("total_count", 0)
+    except Exception:
+        coauthored = 0
+    return {
+        "merged_prs": merged.get("total_count", len(items)),
+        "merged_repos": len(repos),
+        "quick_closes": quick,
+        "coauthored": coauthored,
     }

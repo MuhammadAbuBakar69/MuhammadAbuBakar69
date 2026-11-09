@@ -19,6 +19,7 @@ import gh  # noqa: E402
 import cards  # noqa: E402
 import make_ascii_svg  # noqa: E402
 import make_achievements_svg  # noqa: E402
+import make_badges_svg  # noqa: E402
 import make_banner_svg  # noqa: E402
 import make_heatmap_svg  # noqa: E402
 
@@ -115,6 +116,8 @@ def main() -> None:
         "longest_end": spans["longest_end"].isoformat() if spans["longest_end"] else None,
         "built": date.today().isoformat(),
         "work": gh.get_work_totals(user["login"]),
+        "badges": gh.get_badge_stats(user["login"]),
+        "best_repo_stars": max((r.get("stargazers_count", 0) for r in repos), default=0),
     }
 
     if spans["longest_start"] and spans["longest_end"]:
@@ -126,6 +129,7 @@ def main() -> None:
     make_heatmap_svg.render(days, stats["login"], os.path.join(ASSETS, "contrib-heatmap.svg"))
     make_banner_svg.render(stats, os.path.join(ASSETS, "banner.svg"))
     make_achievements_svg.render(stats, os.path.join(ASSETS, "achievements.svg"))
+    make_badges_svg.render(stats, os.path.join(ASSETS, "badges.svg"))
     cards.render_stats(stats, os.path.join(ASSETS, "stats.svg"))
     try:
         # A photo dropped in assets/photo.* beats the avatar: the avatar is only
@@ -157,6 +161,7 @@ def main() -> None:
             "achievements.svg": open(
                 os.path.join(ASSETS, "achievements.svg"), encoding="utf-8"
             ).read(),
+            "badges.svg": open(os.path.join(ASSETS, "badges.svg"), encoding="utf-8").read(),
         },
     )
     if problems:
