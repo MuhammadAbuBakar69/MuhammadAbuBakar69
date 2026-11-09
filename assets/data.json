@@ -1,15 +1,15 @@
 {
   "login": "MuhammadAbuBakar69",
   "name": "Muhammad Abu-Bakar",
-  "contributions": 933,
+  "contributions": 934,
   "current_streak": 1,
   "longest_streak": 31,
   "repos": 68,
   "stars": 4,
   "followers": 0,
   "languages": {
-    "TypeScript": 5,
     "Python": 4,
+    "TypeScript": 5,
     "JavaScript": 39,
     "HTML": 10,
     "CSS": 4
@@ -44,23 +44,23 @@
       "url": "https://github.com/MuhammadAbuBakar69/Festivity"
     },
     {
-      "name": "Power-Digitizing",
-      "description": "new design",
-      "language": "TypeScript",
-      "stars": 0,
-      "url": "https://github.com/MuhammadAbuBakar69/Power-Digitizing"
-    },
-    {
       "name": "MuhammadAbuBakar69",
       "description": "Profile setup",
       "language": "Python",
       "stars": 0,
       "url": "https://github.com/MuhammadAbuBakar69/MuhammadAbuBakar69"
+    },
+    {
+      "name": "Power-Digitizing",
+      "description": "new design",
+      "language": "TypeScript",
+      "stars": 0,
+      "url": "https://github.com/MuhammadAbuBakar69/Power-Digitizing"
     }
   ],
   "active_days": 265,
   "total_days": 366,
-  "avg_active": 3.520754716981132,
+  "avg_active": 3.5245283018867926,
   "best_day": {
     "count": 190,
     "label": "Aug 11"
@@ -124,7 +124,7 @@
     {
       "label": "N",
       "year": 2026,
-      "count": 67
+      "count": 68
     }
   ],
   "current_start": "2026-11-09",
