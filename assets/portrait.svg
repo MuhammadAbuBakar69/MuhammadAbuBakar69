@@ -1,54 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="460" height="520" viewBox="0 0 460 520" role="img" aria-label="ASCII portrait of Muhammad  Abu-Bakar">
-<rect x="0.5" y="0.5" width="459" height="519" rx="12" fill="#0d1117" stroke="#30363d"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="548" viewBox="0 0 460 548" role="img" aria-label="ASCII portrait of Muhammad Abu-Bakar">
+<rect x="0.5" y="0.5" width="459" height="547" rx="12" fill="#0d1117" stroke="#30363d"/>
 <path d="M0 12a12 12 0 0 1 12-12h436a12 12 0 0 1 12 12v36H0Z" fill="#161b22"/>
 <line x1="0" y1="36" x2="460" y2="36" stroke="#30363d"/>
 <circle cx="17" cy="18" r="4.6" fill="#ff5f56"/>
 <circle cx="32" cy="18" r="4.6" fill="#ffbd2e"/>
 <circle cx="47" cy="18" r="4.6" fill="#27c93f"/>
-<text x="62" y="22.5" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="11.5" fill="#8b949e">MuhammadAbuBakar69@github: ~ $ ./portrait.sh</text>
-<text x="444" y="22.5" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10.5" fill="#484f58">640×640 ASCII</text>
-<text xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="9.21" fill="#dfe6f0">
-<tspan x="47.6" y="59.5">                     .:::--==+==----:...                          </tspan>
-<tspan x="47.6" y="69.3">                 .:-+*%@@@@@@@@@%###****+=-:.                     </tspan>
-<tspan x="47.6" y="79.1">               -=+*#@@@@@@@@@@@@@@@@@@@@@@@%*=:                   </tspan>
-<tspan x="47.6" y="88.9">              -*%%@@@@@@@@@%###%%@@@@@@@@@@@@@#+-                 </tspan>
-<tspan x="47.6" y="98.7">             :+%@@@@%%%###**++*#####%%@@@@@@@@@@#+                </tspan>
-<tspan x="47.6" y="108.5">             =#@@@%#*++++++++*******#%%%%%%%@@@@@#-               </tspan>
-<tspan x="47.6" y="118.3">            .+%@@@#*+++**####***####%%@@@@%%%@@@@@*.              </tspan>
-<tspan x="47.6" y="128.1">            .+%@@%%%%@@@@@@@@@@%%%%%@@@@@@@@@@@@@@%-.     .       </tspan>
-<tspan x="47.6" y="137.9">      .   .:-#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*-.   :-.      </tspan>
-<tspan x="47.6" y="147.7">      ::.:=*@@@@@@@%%@@%@@@@%@@@@@@@%%#***+++++*%@@@#=. -*=:      </tspan>
-<tspan x="47.6" y="157.5">     .:::+*#@@##-          :-+**#%#*=:          :+@@@#:=@#=:      </tspan>
-<tspan x="47.6" y="167.3">        ..     ::::-=-:..     ..:       ...:::::..   -.-+#+-.     </tspan>
-<tspan x="47.6" y="177.1">        .    *@@####%*===++=          =+===+*#%@@@@.     %#=:     </tspan>
-<tspan x="47.6" y="186.9">     .-**   .@@@#*##+. :===*#  =@@@  -%++=-:-%**#@@:-. :%@*=:     </tspan>
-<tspan x="47.6" y="196.7">    .-:=@%+ :@@@#*#%+  =+=+#%  @@@@- =#++=-:+@#*#@@:=+ %+=-.      </tspan>
-<tspan x="47.6" y="206.5">    :-  +@@ .@@@%%%#*+=+**#@* -@@@@@  %**+=+*#%%@@@#@::@=-.       </tspan>
-<tspan x="47.6" y="216.3">    :: .+@@  @@@@@@%%####%@@  @@@@@@* *@%#**#%@@@@@@* @@=:        </tspan>
-<tspan x="47.6" y="226.1">    :- .*#-. =@@@@@%%%%@@@%  @@@@@@@@  #@@%###%@@@@%  @@=-....    </tspan>
-<tspan x="47.6" y="235.9">    .-::=::-%  %@%#*+*##*:  #@@@@@@@@@  :*####%@@@@-  -%+***=-    </tspan>
-<tspan x="47.6" y="245.7">    .-===:+:#@= ...:::::. .@@@*##%%@@@@.  .:.:::..  ..=#**+=:.    </tspan>
-<tspan x="47.6" y="255.5">    .:-=+*#.:@@@@@@@@@@@*=+@+  :+*#- +@*+*%@@@@@%%@@ =@#+=--:.    </tspan>
-<tspan x="47.6" y="265.3">       .=%@+ %@%%@@@@@@%#%%#+=+*+++--*@@@@@@@@@@@@@* %@@%*++-:    </tspan>
-<tspan x="47.6" y="275.1">        -#@%:+@##%@@@@@@@@@@+-..:.   :@@@@@@@@@@@@@=-@@@@@#+-.    </tspan>
-<tspan x="47.6" y="284.9">       .-+#%.:###%@@@@@@@@%.           +%**@@@@@@%#-+@@@%*=-:     </tspan>
-<tspan x="47.6" y="294.7">      :=+#@@@ **##%%%%*:     :+#%@@@+.     .%@@@%#*-+%#*+=-:.     </tspan>
-<tspan x="47.6" y="304.5">      .=*%@@@-=*##%%#=      :=++**#**++-     #@@%#+=*#*+=-:.      </tspan>
-<tspan x="47.6" y="314.3">       :=*%@@#+*##%%*:    :=+*#%@%%%@@%#*- .:+@@#*==++==-::.      </tspan>
-<tspan x="47.6" y="324.1">       .-+%@@@#+*#%%%+--+#%#*+==+++++*#@@@+=*#%#*=-=+====-:.      </tspan>
-<tspan x="47.6" y="333.9">       .:+=: +@+=*#%%#**#%%#*-       :*@@@#**#%#+------=-:.       </tspan>
-<tspan x="47.6" y="343.7">        :.    @@=:*####%%%%@@@@+-=*@#%@@@@@##%#*-:....:::.        </tspan>
-<tspan x="47.6" y="353.5">              *@@*--+*%@@@@@@@@@@@@@@@@@@@@%*****+=:::::.         </tspan>
-<tspan x="47.6" y="363.3">               %@@%=:-=*@@@@@@@@@@##@@@@@@@*-=%@@%*=--::.         </tspan>
-<tspan x="47.6" y="373.1">                =@@@*:  :+%#*#%#**+====+*=. .*@@#+=-:::.          </tspan>
-<tspan x="47.6" y="382.9">                  #@@@*:      ......       =%@%*=-::..            </tspan>
-<tspan x="47.6" y="392.7">                    *@@@*:               -@@@%*=-:..              </tspan>
-<tspan x="47.6" y="402.5">                      :*%@@#*+-::.   ::=#@@@%*+=::.               </tspan>
-<tspan x="47.6" y="412.3">                         :+#%%###**#%@@@@%##=  :.                 </tspan>
-<tspan x="47.6" y="422.1">                            .-=+**+*####*+++                      </tspan>
-<tspan x="47.6" y="431.9">                                .:::-===---:                      </tspan>
-<tspan x="47.6" y="441.7">                                      .                           </tspan>
+<text x="62.0" y="22.5" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="11.5" fill="#8b949e">muhammadabubakar69@github: ~ $ ./portrait.sh</text>
+<text x="442.0" y="22.5" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10.5" fill="#484f58" text-anchor="end">--ascii</text>
+<text xml:space="preserve" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="9.26" fill="#dfe6f0">
+<tspan x="46.7" y="59.6">                   .:-===++++====------::..                       </tspan>
+<tspan x="46.7" y="69.4">                .::-=+*######*****+++++++=-:.                     </tspan>
+<tspan x="46.7" y="79.3">               -==+***++++++*+++++++*****##*+=:.                  </tspan>
+<tspan x="46.7" y="89.1">              -++++++++*****+==+++++++++++++*#*+-.                </tspan>
+<tspan x="46.7" y="99.0">             :=**++++++++==----=====++++++++++***+.               </tspan>
+<tspan x="46.7" y="108.8">             -+*+++==---::----------=======+++++**=               </tspan>
+<tspan x="46.7" y="118.7">            .=+*++=----==+++=========++++++=+++++*+:              </tspan>
+<tspan x="46.7" y="128.5">            .=+++=+++********+++++++++++++++++++++*-.     .       </tspan>
+<tspan x="46.7" y="138.4">      .   .:-+*+++++++++++++++++++++++**********++*+-.   :.       </tspan>
+<tspan x="46.7" y="148.2">      .. :=+****#%%#*#%#####**++++++****++++++++#*+**=..==-.      </tspan>
+<tspan x="46.7" y="158.1">      ...-=+##**=... ....::--++++**+=-....      :+%%#+.=*+-:      </tspan>
+<tspan x="46.7" y="167.9">        ....:  .:::-=-....   ..:::..    ...:::--:. ::-.:+==:.     </tspan>
+<tspan x="46.7" y="177.8">       ..   .#%#++=+==:::---:   .::  .=--:::-+***#%:    :*=-:     </tspan>
+<tspan x="46.7" y="187.6">     .-=*:. :#++=--==: .:.:=*. +%%%: -+-:::.-+=-++#::. -#*+-.     </tspan>
+<tspan x="46.7" y="197.5">    .::=+#* -#++=-===..--:-+*.:%++#+ -=-::::++==++#:-- #=--.      </tspan>
+<tspan x="46.7" y="207.3">    .. .+*%::%++++=====--=++* +#+++%:.*==---==++++*+*--*-:.       </tspan>
+<tspan x="46.7" y="217.2">    .. .+*%::%+++++=====+++%:-%++++*# *+++===+++++++* %#-.        </tspan>
+<tspan x="46.7" y="227.0">    .: .=+-..+%+++++==+++#%::%++++++%-:##++=-=+++++#::%*=:....    </tspan>
+<tspan x="46.7" y="236.9">    ..:.::.-*::##**+=++*+-.:%****++++%-.=**+++*###%=  =+-==--:    </tspan>
+<tspan x="46.7" y="246.7">     :::::-.*%+   ..:...  :%*#+++++##*%-   .....   . .==---:..    </tspan>
+<tspan x="46.7" y="256.6">     .:--=+.-#*########*+-+++. :-=+-.++++**#######%%.+#+-:...     </tspan>
+<tspan x="46.7" y="266.4">       .=+** #+==+++++++++*=-:---==:.=+**+++++++++** #+*++=-:.    </tspan>
+<tspan x="46.7" y="276.3">        -++*.++==+++++++*++#+:.:::.  -%*+**+++++++*--*+++++-:.    </tspan>
+<tspan x="46.7" y="286.1">       .:-=*::+-==++++*##%%-.  ...::. :+***%+++++=+:=****+-:.     </tspan>
+<tspan x="46.7" y="296.0">      .-=+*+% =--=+++**-::.  :=+*###+:. ...-%*+++==.=++=-::.      </tspan>
+<tspan x="46.7" y="305.8">      .-=+++#--=-===+=.    .:-::--=-===-.   :*+++=-:-=--::.       </tspan>
+<tspan x="46.7" y="315.7">       :-=++**--====+:  ..----==++=+++++*=..:=*+==::--:::..       </tspan>
+<tspan x="46.7" y="325.5">       .:=*#%*+-====+=--=**+=-==+===++=**#+-==+==-::-:::::.       </tspan>
+<tspan x="46.7" y="335.4">        :-=-:**=:=======+====-.      :+++++--===-:.::::::..       </tspan>
+<tspan x="46.7" y="345.2">        ..   :%#=.=+=-=+++++*##+-=*#***+++*=-===:..   ....        </tspan>
+<tspan x="46.7" y="355.1">             .#*#+::-=+*+++++++*#*+**+++++++==-=+=-:.....         </tspan>
+<tspan x="46.7" y="364.9">              :%***=.:=+#*+***+***++#*****%*--**++=-....          </tspan>
+<tspan x="46.7" y="374.8">               :*%+#*:  -*#*+*#*++=-===+++- :***+=-:....          </tspan>
+<tspan x="46.7" y="384.6">                 :#%+#*-  ....::.:...  .. .+*++=-:...             </tspan>
+<tspan x="46.7" y="394.5">                  .:*%*#*-:...          .+%*++=-:..               </tspan>
+<tspan x="46.7" y="404.3">                    .:=**+**+=-:::..:--+*#++++=:..                </tspan>
+<tspan x="46.7" y="414.2">                       ..-+**=====++****+*+++....                 </tspan>
+<tspan x="46.7" y="424.0">                          ..:-======+++++=-=.                     </tspan>
+<tspan x="46.7" y="433.9">                               ..:::-----:::                      </tspan>
+<tspan x="46.7" y="443.7">                                    .......                       </tspan>
 </text>
-<text x="18" y="466" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="11.5" fill="#39d353">$ whoami</text>
-<text x="18" y="496" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="19" font-weight="600" fill="#e6edf3">Muhammad  Abu-Bakar</text>
+<text x="18.0" y="468.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="11.5" fill="#39d353">$ whoami</text>
+<text x="18.0" y="496.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="19" fill="#e6edf3" font-weight="600">Muhammad Abu-Bakar</text>
+<line x1="18" y1="516" x2="442" y2="516" stroke="#30363d"/>
+<text x="18.0" y="534.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="9.5" fill="#484f58">auto-refreshed daily · 933 contributions / 12 months</text>
+<text x="442.0" y="534.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="9.5" fill="#484f58" text-anchor="end">built 2026-11-09</text>
 </svg>

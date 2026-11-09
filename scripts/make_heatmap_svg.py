@@ -62,7 +62,7 @@ def render(days: dict[date, int], user: str, out_path: str) -> str:
         f'viewBox="0 0 {width} {height}" role="img" '
         f'aria-label="{escape(user)} GitHub contribution graph">',
     ]
-    out += cards.chrome(width, height, "./contributions.sh", right=f"{total:,} contributions", user=user)
+    out += cards.chrome(width, height, user, "./contributions.sh", right=f"{total:,} contributions")
 
     # month labels
     seen: set[int] = set()
