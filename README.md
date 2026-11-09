@@ -1,7 +1,16 @@
 <div align="center">
 
-<!-- The three panes below are rebuilt by .github/workflows/update-profile-art.yml
-     every morning: heatmap, ASCII portrait and stat card all come from the GitHub API. -->
+<!-- Everything below is rebuilt by .github/workflows/update-profile-art.yml every morning.
+     Cover, achievements, heatmap, portrait and stats all come from the GitHub API, so no number
+     on this page can go stale or be typed by hand. -->
+
+<img src="./assets/banner.svg" width="1180" alt="Muhammad Abu-Bakar — Full-Stack Developer and AI Automation Engineer" />
+
+<br>
+
+<img src="./assets/achievements.svg" width="1180" alt="Achievements, computed from the GitHub API" />
+
+<br>
 
 <img src="./assets/contrib-heatmap.svg" width="845" alt="Contribution graph, refreshed daily from the GitHub API" />
 
@@ -94,7 +103,8 @@ muhammadabubakar69@github ~ $ whoami --verbose
 
 <br>
 
-<i>This README maintains itself. The graph, streaks and language stats are pulled
-from the GitHub API every morning, so the numbers are always current.</i>
+<i>This README maintains itself. The cover, achievements, graph, streaks and language stats are
+pulled from the GitHub API every morning, so the numbers are always current. Nothing on this page is
+a hand-typed claim: if a figure stops being true, it changes on its own.</i>
 
 </div>
