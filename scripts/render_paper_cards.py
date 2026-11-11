@@ -475,6 +475,72 @@ def featured_repos(repos):
     return out[:3]
 
 
+def spec_sheet(stats, out_dir):
+    """Who he is, as a specification sheet rather than a pasted terminal session.
+
+    The README used a markdown code fence for this block, which is the least reliable element on the
+    page: it wraps on mobile, loses its alignment in the GitHub app, cannot carry a rule or a type
+    hierarchy, and reads as a gist rather than a profile. The information is unchanged and the mono
+    prompt is kept so the origin is still obvious, but the content now sits on a measured grid with
+    hairline rules and one accent, like the rest of the cards.
+    """
+    h = 318
+    half = (W - 84) / 2
+    rows = [
+        ("STACK", "React \u00b7 Next.js \u00b7 TypeScript \u00b7 Node.js"),
+        ("BACKEND", "Supabase \u00b7 Firebase \u00b7 MongoDB \u00b7 MySQL"),
+        ("AI", "OpenAI \u00b7 Gemini \u00b7 LangChain \u00b7 n8n \u00b7 RAG"),
+        ("SHIPPING", "ThreadMind \u00b7 GrowthPilot \u00b7 jobpilot \u00b7 otto"),
+        ("WRITING", "Notes on agents, evaluation and shipping"),
+        ("STATUS", "Open to work \u00b7 remote or Karachi"),
+    ]
+    cells = []
+    for i, (label, value) in enumerate(rows):
+        col, row = i % 2, i // 2
+        x = 42 + col * (half + 20)
+        y = 176 + row * 38
+        cells.append(
+            f'<text x="{x:.1f}" y="{y}" font-family="{MONO}" font-size="10.5" letter-spacing="1.1" '
+            f'fill="{MUTED}">{label}</text>'
+            f'<text x="{x:.1f}" y="{y + 17}" font-family="{SANS}" font-size="13.5" fill="{INK}">'
+            f'{escape(value)}</text>'
+        )
+    rules = "".join(
+        f'<rect x="42" y="{y}" width="{W - 84}" height="1" fill="{RULE}"/>' for y in (140, 300)
+    )
+    body = f"""
+<rect width="{W}" height="{h}" rx="14" fill="{PAPER}"/>
+<g class="f" {d(0.1)}>
+  <text x="42" y="42" font-family="{MONO}" font-size="12.5" letter-spacing=".4" fill="{BLUE}">whoami</text>
+  <text x="42" y="42" font-family="{MONO}" font-size="12.5" letter-spacing=".4" fill="{BLUE}" opacity="0">
+    <animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;.49;.5;.99;1" dur="1.2s" begin=".6s" repeatCount="1" fill="freeze"/>
+  </text>
+  <rect x="96" y="33" width="7" height="12" fill="{BLUE}" opacity=".9">
+    <animate attributeName="opacity" values="1;1;0;0" dur="1.2s" begin="1.8s" repeatCount="indefinite"/>
+  </rect>
+  <text x="{W - 42}" y="42" text-anchor="end" font-family="{MONO}" font-size="11" letter-spacing=".6"
+        fill="{MUTED}">KARACHI, PK \u00b7 UTC+5</text>
+</g>
+<g class="r" {d(0.25)}>
+  <text x="42" y="98" font-family="{SERIF}" font-size="38" letter-spacing="-.4" fill="{INK}">Full-stack developer <tspan font-style="italic" fill="{BLUE}">and AI engineer</tspan></text>
+</g>
+<g class="f" {d(0.45)}>
+  <text x="42" y="124" font-family="{SANS}" font-size="14" fill="{INK_SOFT}">I build products that ship: agents, RAG pipelines, and the web applications around them.</text>
+  {rules}
+</g>
+<g class="f" {d(0.65)}>{"".join(cells)}</g>
+<g class="f" {d(0.9)}>
+  <text x="42" y="322" font-family="{MONO}" font-size="10.5" letter-spacing=".5" fill="{MUTED}">github.com/MuhammadAbuBakar69</text>
+  <text x="{W - 42}" y="322" text-anchor="end" font-family="{MONO}" font-size="10.5" letter-spacing=".5"
+        fill="{MUTED}">refreshed {stats.get("built", "")}</text>
+</g>
+"""
+    return _write(out_dir, "whoami.svg",
+                  svg(W, h, body, ["serif", "serif-i", "sans", "sans-b", "mono"],
+                      "Muhammad Abu-Bakar: full-stack developer and AI engineer in Karachi. "
+                      "React, Next.js, TypeScript. Agents, RAG and automation."))
+
+
 def portrait_rows_from(svg_text):
     """Pull the ASCII rows out of the generated portrait so the hero and the pane agree."""
     rows = re.findall(r'<tspan[^>]*>([^<]*)</tspan>', svg_text)
@@ -496,6 +562,7 @@ def render_all(stats, days, portrait_dots, out_dir):
              "Active on GitHub this year, mostly in public, mostly with AI in the loop.", 3.6, 2, out_dir)
     )
     written.append(activity(stats, out_dir))
+    written.append(spec_sheet(stats, out_dir))
     written.append(section_title("What I'm", "building", "dark", out_dir))
     written.append(section_title("What I'm", "building", "light", out_dir))
     written.append(heatmap(days, stats["contributions"], out_dir))

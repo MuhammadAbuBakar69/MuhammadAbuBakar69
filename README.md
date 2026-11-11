@@ -27,21 +27,10 @@ Kept, not shown: the terminal-era panels. Uncomment to bring any of them back.
 
 <div align="center">
 
-```bash
-muhammadabubakar69@github ~ $ whoami --verbose
+<img src="./assets/cards/whoami.svg" width="100%" alt="Muhammad Abu-Bakar: full-stack developer and AI engineer in Karachi. React, Next.js, TypeScript, Node. Supabase, Firebase, MongoDB. OpenAI, Gemini, LangChain, n8n. ThreadMind, GrowthPilot, jobpilot, otto. Open to work." />
 
-  Name       Muhammad Abu-Bakar
-  Role       Senior Developer · AI Automation Engineer · Vibe Coder
-  Stack      React · Next.js · TypeScript · Node.js · Express · MongoDB
-  Frontend   Tailwind · Framer Motion · Three.js · Vue · Vite · Figma
-  Backend    Supabase · Firebase · Appwrite · MySQL · Socket.io
-  AI         OpenAI · Gemini · LangChain · n8n · LLM agents & RAG
-  Building   AI-powered products — resume screening, chatbots,
-             commerce platforms with automated pipelines
-  Writing    Vibe coding daily with Cursor and AI copilots
-  Status     Open to work
-  Portfolio  withabubakar.netlify.app
-```
+</div>
+
 
 <div align="center">
 

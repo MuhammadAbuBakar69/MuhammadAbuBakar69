@@ -92,6 +92,7 @@ CARDS = {
     "hero.svg": (880.0, 432, 0),
     "activity.svg": (880.0, 352, 0),
     "heatmap.svg": (880.0, 257, 0),
+    "whoami.svg": (880.0, 330, 0),
     "title-building-light.svg": (880.0, 64, 0),
     "title-building-dark.svg": (880.0, 64, 0),
     "focus-build.svg": (293.333, 222, 0),
