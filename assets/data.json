@@ -1,16 +1,15 @@
 {
   "login": "MuhammadAbuBakar69",
   "name": "Muhammad Abu-Bakar",
-  "contributions": 973,
+  "contributions": 979,
   "current_streak": 1,
   "longest_streak": 31,
   "repos": 70,
   "stars": 4,
   "followers": 0,
   "languages": {
-    "PLpgSQL": 1,
-    "TypeScript": 6,
     "Python": 4,
+    "TypeScript": 7,
     "JavaScript": 39,
     "HTML": 10,
     "CSS": 4
@@ -45,23 +44,23 @@
       "url": "https://github.com/MuhammadAbuBakar69/Festivity"
     },
     {
-      "name": "growthpilot-ai",
-      "description": "AI business growth strategist: website and market analysis, ten-agent strategy pipeline, 30/60/90 roadmap, evidence-classed recommendations.",
-      "language": "PLpgSQL",
+      "name": "MuhammadAbuBakar69",
+      "description": "Auto-refreshing profile art: SVG cards, a halftone portrait and a contribution heatmap generated from the GitHub API every day.",
+      "language": "Python",
       "stars": 0,
-      "url": "https://github.com/MuhammadAbuBakar69/growthpilot-ai"
+      "url": "https://github.com/MuhammadAbuBakar69/MuhammadAbuBakar69"
     },
     {
-      "name": "inkplot",
-      "description": "Photo to vector halftone in the browser. Dots, squares or diamonds, live tone control, SVG export. No upload, no server.",
+      "name": "growthpilot-ai",
+      "description": "Growth analysis for one real business: a scored diagnosis across 7 dimensions, 19 page checks, and a check of your answers against your own page. Local-first, no account.",
       "language": "TypeScript",
       "stars": 0,
-      "url": "https://github.com/MuhammadAbuBakar69/inkplot"
+      "url": "https://github.com/MuhammadAbuBakar69/growthpilot-ai"
     }
   ],
   "active_days": 266,
   "total_days": 368,
-  "avg_active": 3.6578947368421053,
+  "avg_active": 3.680451127819549,
   "best_day": {
     "count": 190,
     "label": "Aug 11"
@@ -125,7 +124,7 @@
     {
       "label": "N",
       "year": 2026,
-      "count": 107
+      "count": 113
     }
   ],
   "current_start": "2026-11-11",
@@ -137,7 +136,7 @@
     "merged_prs": 13,
     "issues": 20,
     "followers": 0,
-    "commits_year": 857,
+    "commits_year": 894,
     "prs_year": 15,
     "reviews_year": 0
   },

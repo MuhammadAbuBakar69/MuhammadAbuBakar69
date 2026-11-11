@@ -71,8 +71,8 @@ muhammadabubakar69@github ~ $ whoami --verbose
 | **[booking-system](https://github.com/MuhammadAbuBakar69/booking-system)** | Booking system with calendar and availability | JavaScript | 1 |
 | **[github-analyzer](https://github.com/MuhammadAbuBakar69/github-analyzer)** | GitHub profile analyzer with stats via GitHub API | JavaScript | 1 |
 | **[Festivity](https://github.com/MuhammadAbuBakar69/Festivity)** | Awwward Winning Website | CSS | 1 |
-| **[growthpilot-ai](https://github.com/MuhammadAbuBakar69/growthpilot-ai)** | AI business growth strategist: website and market analysis, ten-agent strategy pipeline... | PLpgSQL | 0 |
-| **[inkplot](https://github.com/MuhammadAbuBakar69/inkplot)** | Photo to vector halftone in the browser. Dots, squares or diamonds, live tone control,... | TypeScript | 0 |
+| **[MuhammadAbuBakar69](https://github.com/MuhammadAbuBakar69/MuhammadAbuBakar69)** | Auto-refreshing profile art: SVG cards, a halftone portrait and a contribution heatmap... | Python | 0 |
+| **[growthpilot-ai](https://github.com/MuhammadAbuBakar69/growthpilot-ai)** | Growth analysis for one real business: a scored diagnosis across 7 dimensions, 19 page... | TypeScript | 0 |
 
 <!-- featured:end -->
 
