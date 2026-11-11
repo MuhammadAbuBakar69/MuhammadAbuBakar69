@@ -15,5 +15,12 @@
 .nu{transform-box:fill-box;animation:nudgeup 1.8s ease-in-out infinite}
 .ti{opacity:0;transform-box:fill-box;transform-origin:50% 60%;animation:tilein 1.1s cubic-bezier(.2,.8,.2,1) both}
 .sh{animation:sheen 5s ease-in-out infinite}
-@media (prefers-reduced-motion: reduce){.r,.f,.g,.p,.live,.nu,.ti{animation:none!important;opacity:1!important;transform:none!important}.sh{display:none}}
+/* Hover rules below only fire when the SVG is inlined or opened directly. Inside an img element, which is
+   how GitHub renders a README image, the document has no pointer, so these are a bonus, not the
+   effect you see on the profile. The breathing glow and the dot tint carry the colour there. */
+.portrait{transition:filter .35s ease}
+.portrait:hover{filter:drop-shadow(0 0 22px rgba(47,85,255,.55))}
+.breathe{animation:breathe 6s ease-in-out infinite}
+@keyframes breathe{0%,100%{opacity:.55}50%{opacity:1}}
+@media (prefers-reduced-motion: reduce){.r,.f,.g,.p,.live,.nu,.ti,.breathe{animation:none!important;opacity:1!important;transform:none!important}.sh{display:none}}
 </style><text class="r" style="animation-delay:4.40s" x="2" y="46" font-family="'Instrument Serif', Georgia, serif" font-size="34" fill="#111111">What I&#x27;m <tspan font-style="italic">building</tspan></text></svg>
