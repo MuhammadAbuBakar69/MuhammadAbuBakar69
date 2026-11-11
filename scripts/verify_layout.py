@@ -70,6 +70,18 @@ def _canvas(svg: str, path: str) -> tuple[float, float]:
     return float(m.group(1)), float(m.group(2))
 
 
+CARDS = {
+    "hero.svg": (880.0, 432, 48),
+    "activity.svg": (880.0, 352, 48),
+    "title-building.svg": (880.0, 132, 48),
+    "focus-build.svg": (293.333, 222, 24),
+    "focus-automate.svg": (293.333, 222, 24),
+    "focus-write.svg": (293.333, 222, 24),
+    "repo-threadmind-ai.svg": (293.333, 188, 24),
+    "repo-jobpilot.svg": (293.333, 188, 24),
+    "repo-otto.svg": (293.333, 188, 24),
+}
+
 PANELS = {"banner.svg": (1280, 300), "achievements.svg": (1280, 312), "badges.svg": (1280, 324)}
 
 
@@ -84,7 +96,7 @@ def _panel(name: str, svg: str, login: str) -> list[str]:
         problems.append(f"{name}: truncated file (no closing </svg>)")
 
     runs = _texts(svg)
-    prompt = re.compile(rf"^{re.escape(login.lower())}@github: ~ \$ \./[a-z]+\.sh$")
+    prompt = re.compile(rf"^{re.escape(login.lower())}@github: ~ \$ \./[a-z]+\.sh( [a-z-]+)*$")
     if not any(prompt.match(_plain(body)) for attrs, body in runs):
         problems.append(f"{name}: title bar does not carry the standard prompt")
 
@@ -106,14 +118,40 @@ def _panel(name: str, svg: str, login: str) -> list[str]:
     return problems
 
 
+def _card(name: str, svg: str) -> list[str]:
+    """README cards: no terminal chrome, so no prompt rule - size, legibility and gutter only."""
+    problems: list[str] = []
+    want_w, want_h, pad = CARDS[name]
+    w, h = _canvas(svg, name)
+    if abs(w - want_w) > 0.01 or h != want_h:
+        problems.append(f"cards/{name}: canvas {w}x{h}, expected {want_w}x{want_h}")
+    if not svg.rstrip().endswith("</svg>"):
+        problems.append(f"cards/{name}: truncated file (no closing </svg>)")
+    for attrs, body in _texts(svg):
+        text = _plain(body)
+        if not text or "x" not in attrs or not attrs.get("font-size"):
+            continue
+        size = float(attrs["font-size"])
+        if size < 9:
+            problems.append(f"cards/{name}: '{text[:28]}' is {size}px, below the 9px floor")
+        x = float(attrs["x"])
+        span = len(text) * size * 0.6
+        anchor = attrs.get("text-anchor", "start")
+        start = x if anchor == "start" else (x - span if anchor == "end" else x - span / 2)
+        if start < pad - 1.0 or start + span > want_w - pad + 1.0:
+            problems.append(f"cards/{name}: '{text[:28]}' breaks the {pad}px gutter")
+    return problems
+
+
 def verify(
     stats_svg: str,
     portrait_svg: str,
     login: str,
     panels: dict[str, str] | None = None,
+    cards_set: dict[str, str] | None = None,
 ) -> list[str]:
     problems: list[str] = []
-    prompt = re.compile(rf"^{re.escape(login.lower())}@github: ~ \$ \./[a-z]+\.sh$")
+    prompt = re.compile(rf"^{re.escape(login.lower())}@github: ~ \$ \./[a-z]+\.sh( [a-z-]+)*$")
 
     for path, svg in (("stats.svg", stats_svg), ("portrait.svg", portrait_svg)):
         w, h = _canvas(svg, path)
@@ -195,6 +233,11 @@ def verify(
             )
         if left + art_w > W - PAD + 1.5:
             problems.append(f"portrait block overflows the right gutter by {left + art_w - (W - PAD):.1f}px")
+
+    for name, svg in (panels or {}).items():
+        problems.extend(_panel(name, svg, login))
+    for name, svg in (cards_set or {}).items():
+        problems.extend(_card(name, svg))
 
     return problems
 

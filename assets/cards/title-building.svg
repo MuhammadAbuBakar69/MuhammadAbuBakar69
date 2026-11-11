@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880.000" height="132" viewBox="0 0 880.000 132" role="img" aria-label="What I&#x27;m building">
+<rect x="0.5" y="0.5" width="879.000" height="131" rx="14" fill="#0d1117" stroke="#30363d"/>
+<text x="440.0" y="74.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="15" fill="#8b949e" text-anchor="middle" letter-spacing="3">WHAT I&#x27;M BUILDING</text>
+<line x1="48.0" y1="69" x2="315.5" y2="69" stroke="#30363d"/>
+<line x1="564.5" y1="69" x2="832.0" y2="69" stroke="#30363d"/>
+</svg>

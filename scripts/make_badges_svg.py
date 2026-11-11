@@ -81,7 +81,7 @@ def render(stats: dict, out_path: str) -> str:
     out = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" '
         f'role="img" aria-label="{cards.escape(stats["name"])} — GitHub achievements and progress">',
-        *cards.chrome(W, H, stats["login"], "./badges.sh", right="--github"),
+        *cards.chrome(W, H, stats["login"], "./badges.sh", right="--github", pad=PAD),
     ]
     for i, card in enumerate(cards_data):
         row, col = divmod(i, COLS)

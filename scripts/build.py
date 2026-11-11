@@ -20,6 +20,7 @@ import cards  # noqa: E402
 import make_ascii_svg  # noqa: E402
 import make_achievements_svg  # noqa: E402
 import make_badges_svg  # noqa: E402
+import render_cards  # noqa: E402
 import make_banner_svg  # noqa: E402
 import make_heatmap_svg  # noqa: E402
 
@@ -120,6 +121,9 @@ def main() -> None:
         "best_repo_stars": max((r.get("stargazers_count", 0) for r in repos), default=0),
     }
 
+    stats["focus"] = render_cards.focus_specs(stats)
+    stats["featured"] = render_cards.featured_repos(repos)
+
     if spans["longest_start"] and spans["longest_end"]:
         stats["longest_label"] = (
             f"{spans['longest_start'].strftime('%b %-d')} - "
@@ -130,6 +134,7 @@ def main() -> None:
     make_banner_svg.render(stats, os.path.join(ASSETS, "banner.svg"))
     make_achievements_svg.render(stats, os.path.join(ASSETS, "achievements.svg"))
     make_badges_svg.render(stats, os.path.join(ASSETS, "badges.svg"))
+    cards_written = render_cards.render_all(stats, os.path.join(ASSETS, "cards"))
     cards.render_stats(stats, os.path.join(ASSETS, "stats.svg"))
     try:
         # A photo dropped in assets/photo.* beats the avatar: the avatar is only
@@ -162,6 +167,10 @@ def main() -> None:
                 os.path.join(ASSETS, "achievements.svg"), encoding="utf-8"
             ).read(),
             "badges.svg": open(os.path.join(ASSETS, "badges.svg"), encoding="utf-8").read(),
+        },
+        {
+            os.path.basename(path): open(path, encoding="utf-8").read()
+            for path in cards_written
         },
     )
     if problems:
