@@ -41,8 +41,8 @@ def _crop(img, aspect: float):
     w, h = img.size
     if box:
         x, y, fw, fh = box
-        cx, cy = x + fw / 2, y + fh / 2
-        side = fh * 1.55
+        cx, cy = x + fw / 2, y + fh * 0.56
+        side = fh * 1.30
     else:
         cx, cy = w / 2, h * 0.42
         side = min(w, h) * 0.9
@@ -56,7 +56,7 @@ def _crop(img, aspect: float):
     return img.crop((left, top, right, bottom))
 
 
-def dot_group(image_bytes: bytes, cols: int = 50, rows: int = 45, cell: float = 8.0,
+def dot_group(image_bytes: bytes, cols: int = 56, rows: int = 56, cell: float = 8.0,
               ink: str = "#111111", accent: str = "#2f55ff") -> tuple[str, float, float]:
     """Halftone the image into circles.
 
@@ -84,10 +84,9 @@ def dot_group(image_bytes: bytes, cols: int = 50, rows: int = 45, cell: float = 
             if coverage < 0.10:
                 continue
             r = radius * coverage
-            colour = accent if coverage > 0.93 else ink
             parts.append(
                 f'<circle cx="{col * cell + cell / 2:.1f}" cy="{row * cell + cell / 2:.1f}" '
-                f'r="{r:.1f}" fill="{colour}"/>'
+                f'r="{r:.1f}"/>'
             )
             dots += 1
     images += 1
