@@ -42,7 +42,7 @@ def _crop(img, aspect: float):
     if box:
         x, y, fw, fh = box
         cx, cy = x + fw / 2, y + fh * 0.56
-        side = fh * 1.30
+        side = fh * 1.16
     else:
         cx, cy = w / 2, h * 0.42
         side = min(w, h) * 0.9

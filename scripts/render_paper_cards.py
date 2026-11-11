@@ -151,7 +151,7 @@ def hero(stats, portrait_dots, out_dir):
     # The portrait is vector dots, scaled to fill the right block (520..848 wide, 46..330 tall).
     dots_markup, dots_w, dots_h = portrait_dots
     # Target box on the right of the hero: as tall as the card allows, without touching the name.
-    box_x, box_y, box_w, box_h = 492.0, 34.0, 356.0, 348.0
+    box_x, box_y, box_w, box_h = 464.0, 0.0, 416.0, 420.0
     scale = min(box_w / dots_w, box_h / dots_h)
     off_x = box_x + (box_w - dots_w * scale) / 2
     off_y = box_y + (box_h - dots_h * scale) / 2
@@ -161,6 +161,7 @@ def hero(stats, portrait_dots, out_dir):
     )
     body = f"""
 <defs>
+  <clipPath id="heroClip"><rect width="{W}" height="420" rx="14"/></clipPath>
   <linearGradient id="shine" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="600" y2="0">
     <stop offset="0" stop-color="{INK}"/><stop offset=".42" stop-color="{INK}"/>
     <stop offset=".5" stop-color="{BLUE}"/><stop offset=".58" stop-color="{INK}"/>
@@ -177,13 +178,13 @@ def hero(stats, portrait_dots, out_dir):
 <text class="r" {d(0.15)} x="44" y="190" font-family="{SERIF}" font-size="96" letter-spacing="-2" fill="{INK}">{escape(first)}</text>
 <text class="r" {d(0.3)} x="44" y="282" font-family="{SERIF}" font-style="italic" font-size="96" letter-spacing="-2" fill="url(#shine)">{escape(second)}</text>
 <g class="r" {d(0.55)}>
-  {text_lines(48, 330, wrap(tagline, 46), 27, f'font-family="{SANS}" font-size="18" fill="{INK_SOFT}"')}
+  {text_lines(48, 330, wrap(tagline, 40), 27, f'font-family="{SANS}" font-size="18" fill="{INK_SOFT}"')}
 </g>
 <g class="f" {d(0.8)}>
   <text x="48" y="392" font-family="{MONO}" font-size="13" fill="{INK}">withabubakar.netlify.app</text>
   <text class="nu" x="272" y="392" font-family="{MONO}" font-size="13" fill="{BLUE}">&#8599;</text>
 </g>
-<g transform="translate(520 46) scale(.41) translate(-20 -7)" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+<g clip-path="url(#heroClip)" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
   {rows}
 </g>
 """
@@ -234,7 +235,7 @@ def activity(stats, out_dir):
     h = 340
     monthly = stats["monthly"][-12:]
     best_total = max((m["count"] for m in monthly[:-1]), default=0)
-    x0, x1, base, max_h, gap = 40, 600, 292, 140, 10
+    x0, x1, base, max_h, gap = 40, 600, 306, 118, 10
     bw = (x1 - x0 - gap * (len(monthly) - 1)) / len(monthly)
     bars = []
     for i, month in enumerate(monthly):
@@ -273,10 +274,26 @@ def activity(stats, out_dir):
         if i < 2:
             right.append(f'<rect class="f" {d(2.6)} x="650" y="{y + 44}" width="190" height="1" fill="{RULE}"/>')
 
+
+    # Milestone progress: the next round number of contributions, measured not promised.
+    total = stats["contributions"]
+    target = 1000 if total < 1000 else (2500 if total < 2500 else 5000)
+    left_to = max(0, target - total)
+    frac = min(1.0, total / target)
+    milestone = (
+        f'<g class="r" {d(2.5)}>'
+        f'<rect x="40" y="136" width="560" height="6" rx="3" fill="{RULE}"/>'
+        f'<rect class="g" style="animation-delay:2.6s" x="40" y="136" width="{560 * frac:.1f}" '
+        f'height="6" rx="3" fill="{BLUE}"/>'
+        f'<text x="40" y="166" font-family="{MONO}" font-size="11" fill="{MUTED}">'
+        f'{total:,} of {target:,} &#183; {left_to:,} to go</text>'
+        f'</g>'
+    )
     body = f"""
 <rect width="{W}" height="{h}" rx="14" fill="{PAPER}"/>
 <text class="f" {d(1.9)} x="40" y="58" font-family="{MONO}" font-size="12" letter-spacing="1" fill="{MUTED}">THE LAST 12 MONTHS ON GITHUB</text>
 <text class="r" {d(2.0)} x="38" y="114" font-family="{SERIF}" font-size="52" fill="{INK}">{stats["contributions"]:,} <tspan font-style="italic">contributions</tspan></text>
+{milestone}
 {"".join(bars)}
 {"".join(right)}
 """
