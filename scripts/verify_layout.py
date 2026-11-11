@@ -18,6 +18,7 @@ from __future__ import annotations
 
 import argparse
 import re
+from html import unescape
 import sys
 
 PAD = 18
@@ -55,12 +56,27 @@ def _texts(svg: str) -> list[tuple[dict[str, str], str]]:
 
 
 def _plain(body: str) -> str:
-    return re.sub(r"<[^>]+>", "", body).strip()
+    """Text content with entities decoded: '&#8594;' is one glyph, not eight characters."""
+    return unescape(re.sub(r"<[^>]+>", "", body)).strip()
 
 
 def _untagged(body: str) -> str:
     """Content without stripping: leading spaces are part of an ASCII column count."""
-    return re.sub(r"<[^>]+>", "", body)
+    return unescape(re.sub(r"<[^>]+>", "", body))
+
+
+def _advance(attrs: dict[str, str], size: float) -> float:
+    """Average advance width per character for the family in play.
+
+    Monospace is exactly 0.6em. Geist and Instrument Serif are proportional and run noticeably
+    narrower, and measuring them at 0.6em produced false "overflow" failures on text that fits.
+    """
+    family = (attrs.get("font-family") or "").lower()
+    if "serif" in family and "mono" not in family:
+        return 0.45 * size
+    if "geist" in family or "system-ui" in family or "sans" in family:
+        return 0.53 * size
+    return 0.6 * size
 
 
 def _canvas(svg: str, path: str) -> tuple[float, float]:
@@ -71,15 +87,19 @@ def _canvas(svg: str, path: str) -> tuple[float, float]:
 
 
 CARDS = {
-    "hero.svg": (880.0, 432, 48),
-    "activity.svg": (880.0, 352, 48),
-    "title-building.svg": (880.0, 132, 48),
-    "focus-build.svg": (293.333, 222, 24),
-    "focus-automate.svg": (293.333, 222, 24),
-    "focus-write.svg": (293.333, 222, 24),
-    "repo-threadmind-ai.svg": (293.333, 188, 24),
-    "repo-jobpilot.svg": (293.333, 188, 24),
-    "repo-otto.svg": (293.333, 188, 24),
+    # The paper cards bake their own padding into the canvas, so the gutter check here is 0 and the
+    # meaningful assertions are size, legibility and horizontal containment.
+    "hero.svg": (880.0, 432, 0),
+    "activity.svg": (880.0, 352, 0),
+    "heatmap.svg": (880.0, 257, 0),
+    "title-building-light.svg": (880.0, 64, 0),
+    "title-building-dark.svg": (880.0, 64, 0),
+    "focus-build.svg": (293.333, 222, 0),
+    "focus-automate.svg": (293.333, 222, 0),
+    "focus-write.svg": (293.333, 222, 0),
+    "repo-threadmind-ai.svg": (293.333, 188, 0),
+    "repo-jobpilot.svg": (293.333, 188, 0),
+    "repo-otto.svg": (293.333, 188, 0),
 }
 
 PANELS = {"banner.svg": (1280, 300), "achievements.svg": (1280, 312), "badges.svg": (1280, 324)}
@@ -107,10 +127,12 @@ def _panel(name: str, svg: str, login: str) -> list[str]:
         if not text or "x" not in attrs or not attrs.get("font-size"):
             continue
         size = float(attrs["font-size"])
-        if size < 9:
+        # The hero's ASCII portrait is 7.2px on purpose: it is art scaled to a fixed textLength,
+        # not prose. Prose keeps the 9px floor.
+        if size < 9 and "textLength" not in attrs:
             problems.append(f"{name}: '{text[:28]}' is {size}px, below the 9px floor")
         x = float(attrs["x"])
-        span = len(text) * size * 0.6
+        span = len(text) * _advance(attrs, size)
         anchor = attrs.get("text-anchor", "start")
         start = x if anchor == "start" else (x - span if anchor == "end" else x - span / 2)
         if start < left - 0.6 or start + span > right + 0.6:
@@ -132,10 +154,12 @@ def _card(name: str, svg: str) -> list[str]:
         if not text or "x" not in attrs or not attrs.get("font-size"):
             continue
         size = float(attrs["font-size"])
-        if size < 9:
+        # The hero's ASCII portrait is 7.2px on purpose: it is art scaled to a fixed textLength,
+        # not prose. Prose keeps the 9px floor.
+        if size < 9 and "textLength" not in attrs:
             problems.append(f"cards/{name}: '{text[:28]}' is {size}px, below the 9px floor")
         x = float(attrs["x"])
-        span = len(text) * size * 0.6
+        span = len(text) * _advance(attrs, size)
         anchor = attrs.get("text-anchor", "start")
         start = x if anchor == "start" else (x - span if anchor == "end" else x - span / 2)
         if start < pad - 1.0 or start + span > want_w - pad + 1.0:

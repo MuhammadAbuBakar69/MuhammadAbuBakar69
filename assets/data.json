@@ -136,8 +136,8 @@
     "merged_prs": 7,
     "issues": 20,
     "followers": 0,
-    "commits_year": 838,
-    "prs_year": 8,
+    "commits_year": 868,
+    "prs_year": 9,
     "reviews_year": 0
   },
   "badges": {
@@ -147,47 +147,65 @@
     "coauthored": 0
   },
   "best_repo_stars": 1,
-  "focus": [
-    {
-      "key": "build",
-      "label": "BUILD",
-      "value": "68 repos",
-      "lines": [
-        "Production web apps in React, Next.js and TypeScript - shipped, not sketched."
-      ]
-    },
-    {
-      "key": "automate",
-      "label": "AUTOMATE",
-      "value": "AI agents",
-      "lines": [
-        "LangChain, n8n and RAG pipelines, with the evals to prove they work."
-      ]
-    },
-    {
-      "key": "write",
-      "label": "WRITE",
-      "value": "Daily",
-      "lines": [
-        "Building in public with Cursor and AI copilots, one commit at a time."
-      ]
-    }
-  ],
   "featured": [
     {
       "name": "threadmind-ai",
       "description": "Autonomous textile factory intelligence platform: fabric defect vision, predictive maintenance, evidence-grounded root cause analysis, and a five-agent LangGraph orchestrator. Research baseline v1.0.",
-      "meta": "Python  \u00b7  computer vision"
+      "language": "Python",
+      "stars": 0,
+      "topics": [
+        "computer-vision",
+        "fastapi",
+        "industrial-iot",
+        "langgraph",
+        "manufacturing-ai",
+        "multi-agent",
+        "nextjs",
+        "predictive-maintenance",
+        "research",
+        "textile"
+      ],
+      "url": "https://github.com/MuhammadAbuBakar69/threadmind-ai"
     },
     {
       "name": "jobpilot",
       "description": "Track job applications from raw posting text. Offline parser, optional FastRouter/OpenAI extractor, SQLite store, FastAPI + CLI. Live docs on GitHub Pages, image on GHCR.",
-      "meta": "Python  \u00b7  cli"
+      "language": "Python",
+      "stars": 0,
+      "topics": [
+        "cli",
+        "fastapi",
+        "github-actions",
+        "job-search",
+        "llm",
+        "pytest",
+        "python",
+        "sqlite"
+      ],
+      "url": "https://github.com/MuhammadAbuBakar69/jobpilot"
     },
     {
       "name": "otto",
       "description": "Autonomous outreach agent with a $0 model bill. No API keys, no subscriptions, no accounts. Standard library only.",
-      "meta": "Python  \u00b7  agentic ai"
+      "language": "Python",
+      "stars": 0,
+      "topics": [
+        "agentic-ai",
+        "ai-agent",
+        "autonomous-agent",
+        "cold-email",
+        "human-in-the-loop",
+        "llm",
+        "local-first",
+        "no-api-key",
+        "ollama",
+        "outreach",
+        "privacy-first",
+        "python",
+        "sqlite",
+        "sqlite3"
+      ],
+      "url": "https://github.com/MuhammadAbuBakar69/otto"
     }
   ],
   "longest_label": "Apr 26 - May 26"
