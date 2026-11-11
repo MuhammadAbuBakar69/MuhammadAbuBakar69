@@ -150,8 +150,15 @@ def hero(stats, portrait_dots, out_dir):
     tagline = "I build AI products that ship: agents, RAG pipelines, and the web apps around them."
     # The portrait is vector dots, scaled to fill the right block (520..848 wide, 46..330 tall).
     dots_markup, dots_w, dots_h = portrait_dots
-    scale = min(328.0 / dots_w, 284.0 / dots_h)
-    rows = f'<g class="f" style="animation-delay:.25s" transform="translate(520 46) scale({scale:.4f})">{dots_markup}</g>' 
+    # Target box on the right of the hero: as tall as the card allows, without touching the name.
+    box_x, box_y, box_w, box_h = 492.0, 34.0, 356.0, 348.0
+    scale = min(box_w / dots_w, box_h / dots_h)
+    off_x = box_x + (box_w - dots_w * scale) / 2
+    off_y = box_y + (box_h - dots_h * scale) / 2
+    rows = (
+        f'<g class="f" style="animation-delay:.25s" '
+        f'transform="translate({off_x:.1f} {off_y:.1f}) scale({scale:.4f})">{dots_markup}</g>'
+    )
     body = f"""
 <defs>
   <linearGradient id="shine" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="600" y2="0">
