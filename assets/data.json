@@ -1,15 +1,16 @@
 {
   "login": "MuhammadAbuBakar69",
   "name": "Muhammad Abu-Bakar",
-  "contributions": 958,
+  "contributions": 973,
   "current_streak": 1,
   "longest_streak": 31,
-  "repos": 68,
+  "repos": 70,
   "stars": 4,
   "followers": 0,
   "languages": {
+    "PLpgSQL": 1,
+    "TypeScript": 6,
     "Python": 4,
-    "TypeScript": 5,
     "JavaScript": 39,
     "HTML": 10,
     "CSS": 4
@@ -44,23 +45,23 @@
       "url": "https://github.com/MuhammadAbuBakar69/Festivity"
     },
     {
-      "name": "MuhammadAbuBakar69",
-      "description": "Profile setup",
-      "language": "Python",
+      "name": "growthpilot-ai",
+      "description": "AI business growth strategist: website and market analysis, ten-agent strategy pipeline, 30/60/90 roadmap, evidence-classed recommendations.",
+      "language": "PLpgSQL",
       "stars": 0,
-      "url": "https://github.com/MuhammadAbuBakar69/MuhammadAbuBakar69"
+      "url": "https://github.com/MuhammadAbuBakar69/growthpilot-ai"
     },
     {
-      "name": "Power-Digitizing",
-      "description": "new design",
+      "name": "inkplot",
+      "description": "Photo to vector halftone in the browser. Dots, squares or diamonds, live tone control, SVG export. No upload, no server.",
       "language": "TypeScript",
       "stars": 0,
-      "url": "https://github.com/MuhammadAbuBakar69/Power-Digitizing"
+      "url": "https://github.com/MuhammadAbuBakar69/inkplot"
     }
   ],
   "active_days": 266,
   "total_days": 368,
-  "avg_active": 3.601503759398496,
+  "avg_active": 3.6578947368421053,
   "best_day": {
     "count": 190,
     "label": "Aug 11"
@@ -124,7 +125,7 @@
     {
       "label": "N",
       "year": 2026,
-      "count": 92
+      "count": 107
     }
   ],
   "current_start": "2026-11-11",
@@ -136,7 +137,7 @@
     "merged_prs": 13,
     "issues": 20,
     "followers": 0,
-    "commits_year": 844,
+    "commits_year": 857,
     "prs_year": 15,
     "reviews_year": 0
   },
