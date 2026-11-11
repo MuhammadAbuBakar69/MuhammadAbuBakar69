@@ -64,7 +64,9 @@ def mono(
     return f"<text {' '.join(attrs)}>{escape(text)}</text>"
 
 
-def chrome(w: int, h: int, login: str, cmd: str, right: str | None = None) -> list[str]:
+def chrome(
+    w: int, h: int, login: str, cmd: str, right: str | None = None, pad: int | None = None
+) -> list[str]:
     """Outer window: rounded frame, title bar with traffic lights, monospace command.
 
     The prompt is always the lowercase login. GitHub logins are case-insensitive, and a title bar
@@ -80,7 +82,7 @@ def chrome(w: int, h: int, login: str, cmd: str, right: str | None = None) -> li
         out.append(f'<circle cx="{17 + i * 15}" cy="18" r="4.6" fill="{colour}"/>')
     out.append(mono(62, 22.5, 11.5, MUTED, f"{login.lower()}@github: ~ $ {cmd}"))
     if right:
-        out.append(mono(w - PAD, 22.5, 10.5, DIM, right, anchor="end"))
+        out.append(mono(w - (pad if pad is not None else PAD), 22.5, 10.5, DIM, right, anchor="end"))
     return out
 
 

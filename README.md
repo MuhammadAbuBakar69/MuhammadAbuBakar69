@@ -1,40 +1,28 @@
 <div align="center">
+<!-- Card set follows the layout the owner asked to match: hero, heatmap, activity, three focus
+     cards, a title rule, three repo cards. Each image sits on the same line with no whitespace
+     between them, otherwise GitHub leaves gaps between the thirds. Rebuilt daily by
+     .github/workflows/update-profile-art.yml - nothing here is typed by hand. -->
 
-<!-- Everything below is rebuilt by .github/workflows/update-profile-art.yml every morning.
-     Cover, achievements, heatmap, portrait and stats all come from the GitHub API, so no number
-     on this page can go stale or be typed by hand. -->
-
-<img src="./assets/banner.svg" width="1180" alt="Muhammad Abu-Bakar — Full-Stack Developer and AI Automation Engineer" />
-
-<br>
-
-<img src="./assets/achievements.svg" width="1180" alt="Achievements, computed from the GitHub API" />
-
-<br>
-
-<img src="./assets/badges.svg" width="1180" alt="GitHub badges and the progress toward each one" />
-
-<br>
-
-<img src="./assets/contrib-heatmap.svg" width="845" alt="Contribution graph, refreshed daily from the GitHub API" />
-
-<br>
-<br>
-
-<table>
-<tr>
+<a href="https://withabubakar.netlify.app"><img src="./assets/cards/hero.svg" width="100%" alt="Muhammad Abu-Bakar. Full-stack developer in Karachi building AI products that ship." /></a><br>
+<img src="./assets/contrib-heatmap.svg" width="100%" alt="Contribution graph, refreshed daily from the GitHub API" /><br>
+<img src="./assets/cards/activity.svg" width="100%" alt="Contributions in the last 12 months, with streak and busiest day" /><br>
+<a href="https://github.com/MuhammadAbuBakar69?tab=repositories"><img src="./assets/cards/focus-build.svg" width="33.333%" alt="BUILD: production web apps" /></a><a href="https://github.com/MuhammadAbuBakar69/threadmind-ai"><img src="./assets/cards/focus-automate.svg" width="33.333%" alt="AUTOMATE: AI agents" /></a><a href="https://withabubakar.netlify.app"><img src="./assets/cards/focus-write.svg" width="33.333%" alt="WRITE: building in public daily" /></a><br>
+<img src="./assets/cards/title-building.svg" width="100%" alt="What I'm building" /><br>
+<a href="https://github.com/MuhammadAbuBakar69/threadmind-ai"><img src="./assets/cards/repo-threadmind-ai.svg" width="33.333%" alt="threadmind-ai" /></a><a href="https://github.com/MuhammadAbuBakar69/jobpilot"><img src="./assets/cards/repo-jobpilot.svg" width="33.333%" alt="jobpilot" /></a><a href="https://github.com/MuhammadAbuBakar69/otto"><img src="./assets/cards/repo-otto.svg" width="33.333%" alt="otto" /></a><br>
+<img src="./assets/achievements.svg" width="100%" alt="Achievements, computed from the GitHub API" /><br>
+<img src="./assets/badges.svg" width="100%" alt="GitHub badges and the progress toward each one" /><br>
+<table role="presentation"><tr>
 <td valign="top"><img src="./assets/portrait.svg" width="440" alt="ASCII portrait" /></td>
 <td valign="top"><img src="./assets/stats.svg" width="440" alt="GitHub stats, refreshed daily" /></td>
-</tr>
-</table>
-
-<br>
-
-<h3><code>muhammadabubakar69@github ~ $ cat about.md</code></h3>
-
-<p><b>Full-Stack &nbsp;·&nbsp; AI Automation Engineer</b></p>
-
+</tr></table>
 </div>
+
+<p align="center">
+<a href="https://withabubakar.netlify.app">portfolio</a> &nbsp;/&nbsp; <a href="https://www.linkedin.com/in/mohamad-abubakar/">linkedin</a> &nbsp;/&nbsp; <a href="https://github.com/MuhammadAbuBakar69">github</a> &nbsp;/&nbsp; <a href="mailto:md.bakar2006@gmail.com">email</a>
+</p>
+
+<div align="center">
 
 ```bash
 muhammadabubakar69@github ~ $ whoami --verbose

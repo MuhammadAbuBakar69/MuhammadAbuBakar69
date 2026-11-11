@@ -69,7 +69,7 @@ def render(stats: dict, out_path: str) -> str:
     out = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" '
         f'role="img" aria-label="{cards.escape(stats["name"])} — profile cover">',
-        *cards.chrome(W, H, user, "./profile.sh --short", right="--cover"),
+        *cards.chrome(W, H, user, "./profile.sh --short", right="--cover", pad=PAD),
         # name block
         cards.mono(PAD, 108, 40, cards.FG, stats["name"], weight=700, spacing="-0.6"),
         cards.mono(PAD + 2, 142, 15.5, cards.ACCENT, "Full-Stack Developer  ·  AI Automation Engineer", spacing="0.4"),

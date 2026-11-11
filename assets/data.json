@@ -1,7 +1,7 @@
 {
   "login": "MuhammadAbuBakar69",
   "name": "Muhammad Abu-Bakar",
-  "contributions": 942,
+  "contributions": 943,
   "current_streak": 1,
   "longest_streak": 31,
   "repos": 68,
@@ -58,9 +58,9 @@
       "url": "https://github.com/MuhammadAbuBakar69/Power-Digitizing"
     }
   ],
-  "active_days": 265,
-  "total_days": 367,
-  "avg_active": 3.5547169811320756,
+  "active_days": 266,
+  "total_days": 368,
+  "avg_active": 3.545112781954887,
   "best_day": {
     "count": 190,
     "label": "Aug 11"
@@ -124,20 +124,20 @@
     {
       "label": "N",
       "year": 2026,
-      "count": 76
+      "count": 77
     }
   ],
-  "current_start": "2026-11-09",
-  "current_end": "2026-11-09",
+  "current_start": "2026-11-11",
+  "current_end": "2026-11-11",
   "longest_start": "2026-04-26",
   "longest_end": "2026-05-26",
-  "built": "2026-11-10",
+  "built": "2026-11-11",
   "work": {
     "merged_prs": 6,
     "issues": 20,
     "followers": 0,
-    "commits_year": 837,
-    "prs_year": 7,
+    "commits_year": 867,
+    "prs_year": 8,
     "reviews_year": 0
   },
   "badges": {
@@ -147,5 +147,48 @@
     "coauthored": 0
   },
   "best_repo_stars": 1,
+  "focus": [
+    {
+      "key": "build",
+      "label": "BUILD",
+      "value": "68 repos",
+      "lines": [
+        "Production web apps in React, Next.js and TypeScript - shipped, not sketched."
+      ]
+    },
+    {
+      "key": "automate",
+      "label": "AUTOMATE",
+      "value": "AI agents",
+      "lines": [
+        "LangChain, n8n and RAG pipelines, with the evals to prove they work."
+      ]
+    },
+    {
+      "key": "write",
+      "label": "WRITE",
+      "value": "Daily",
+      "lines": [
+        "Building in public with Cursor and AI copilots, one commit at a time."
+      ]
+    }
+  ],
+  "featured": [
+    {
+      "name": "threadmind-ai",
+      "description": "Autonomous textile factory intelligence platform: fabric defect vision, predictive maintenance, evidence-grounded root cause analysis, and a five-agent LangGraph orchestrator. Research baseline v1.0.",
+      "meta": "Python  \u00b7  computer vision"
+    },
+    {
+      "name": "jobpilot",
+      "description": "Track job applications from raw posting text. Offline parser, optional FastRouter/OpenAI extractor, SQLite store, FastAPI + CLI. Live docs on GitHub Pages, image on GHCR.",
+      "meta": "Python  \u00b7  cli"
+    },
+    {
+      "name": "otto",
+      "description": "Autonomous outreach agent with a $0 model bill. No API keys, no subscriptions, no accounts. Standard library only.",
+      "meta": "Python  \u00b7  agentic ai"
+    }
+  ],
   "longest_label": "Apr 26 - May 26"
 }
