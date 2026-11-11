@@ -1,21 +1,24 @@
 <div align="center">
-<!-- Card set follows the layout the owner asked to match: hero, heatmap, activity, three focus
-     cards, a title rule, three repo cards. Each image sits on the same line with no whitespace
-     between them, otherwise GitHub leaves gaps between the thirds. Rebuilt daily by
-     .github/workflows/update-profile-art.yml - nothing here is typed by hand. -->
+<!-- Card set mirrors the reference profile: hero, contribution graph, activity, three world tiles,
+     section rule, three repo cards. Images sit on one line with no whitespace between them, or
+     GitHub leaves gaps between the thirds. Rebuilt daily by update-profile-art.yml, never by hand.
+     The older terminal panels are kept below in this comment so nothing is lost. -->
 
 <a href="https://withabubakar.netlify.app"><img src="./assets/cards/hero.svg" width="100%" alt="Muhammad Abu-Bakar. Full-stack developer in Karachi building AI products that ship." /></a><br>
-<img src="./assets/contrib-heatmap.svg" width="100%" alt="Contribution graph, refreshed daily from the GitHub API" /><br>
+<img src="./assets/cards/heatmap.svg" width="100%" alt="Every day of the last year, in blue, refreshed daily" /><br>
 <img src="./assets/cards/activity.svg" width="100%" alt="Contributions in the last 12 months, with streak and busiest day" /><br>
-<a href="https://github.com/MuhammadAbuBakar69?tab=repositories"><img src="./assets/cards/focus-build.svg" width="33.333%" alt="BUILD: production web apps" /></a><a href="https://github.com/MuhammadAbuBakar69/threadmind-ai"><img src="./assets/cards/focus-automate.svg" width="33.333%" alt="AUTOMATE: AI agents" /></a><a href="https://withabubakar.netlify.app"><img src="./assets/cards/focus-write.svg" width="33.333%" alt="WRITE: building in public daily" /></a><br>
-<img src="./assets/cards/title-building.svg" width="100%" alt="What I'm building" /><br>
-<a href="https://github.com/MuhammadAbuBakar69/threadmind-ai"><img src="./assets/cards/repo-threadmind-ai.svg" width="33.333%" alt="threadmind-ai" /></a><a href="https://github.com/MuhammadAbuBakar69/jobpilot"><img src="./assets/cards/repo-jobpilot.svg" width="33.333%" alt="jobpilot" /></a><a href="https://github.com/MuhammadAbuBakar69/otto"><img src="./assets/cards/repo-otto.svg" width="33.333%" alt="otto" /></a><br>
-<img src="./assets/achievements.svg" width="100%" alt="Achievements, computed from the GitHub API" /><br>
-<img src="./assets/badges.svg" width="100%" alt="GitHub badges and the progress toward each one" /><br>
-<table role="presentation"><tr>
-<td valign="top"><img src="./assets/portrait.svg" width="440" alt="ASCII portrait" /></td>
-<td valign="top"><img src="./assets/stats.svg" width="440" alt="GitHub stats, refreshed daily" /></td>
-</tr></table>
+<a href="https://github.com/MuhammadAbuBakar69?tab=repositories"><img src="./assets/cards/focus-build.svg" width="33.333%" alt="BUILD: 68 repos" /></a><a href="https://github.com/MuhammadAbuBakar69/threadmind-ai"><img src="./assets/cards/focus-automate.svg" width="33.333%" alt="AUTOMATE: 3 flagships" /></a><a href="https://withabubakar.netlify.app"><img src="./assets/cards/focus-write.svg" width="33.333%" alt="WRITE: active days" /></a><br>
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/cards/title-building-dark.svg" /><img src="./assets/cards/title-building-light.svg" width="100%" alt="What I'm building" /></picture><br>
+<a href="https://github.com/MuhammadAbuBakar69/threadmind-ai"><img src="./assets/cards/repo-threadmind-ai.svg" width="33.333%" alt="threadmind-ai" /></a><a href="https://github.com/MuhammadAbuBakar69/jobpilot"><img src="./assets/cards/repo-jobpilot.svg" width="33.333%" alt="jobpilot" /></a><a href="https://github.com/MuhammadAbuBakar69/otto"><img src="./assets/cards/repo-otto.svg" width="33.333%" alt="otto" /></a>
+
+<!--
+Kept, not shown: the terminal-era panels. Uncomment to bring any of them back.
+<img src="./assets/banner.svg" width="100%" alt="Cover" />
+<img src="./assets/achievements.svg" width="100%" alt="Achievements" />
+<img src="./assets/badges.svg" width="100%" alt="Badge ladder" />
+<img src="./assets/portrait.svg" width="440" alt="ASCII portrait" />
+<img src="./assets/stats.svg" width="440" alt="GitHub stats" />
+-->
 </div>
 
 <p align="center">

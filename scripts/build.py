@@ -20,9 +20,8 @@ import cards  # noqa: E402
 import make_ascii_svg  # noqa: E402
 import make_achievements_svg  # noqa: E402
 import make_badges_svg  # noqa: E402
-import render_cards  # noqa: E402
+import render_paper_cards  # noqa: E402
 import make_banner_svg  # noqa: E402
-import make_heatmap_svg  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ASSETS = os.path.join(ROOT, "assets")
@@ -121,8 +120,7 @@ def main() -> None:
         "best_repo_stars": max((r.get("stargazers_count", 0) for r in repos), default=0),
     }
 
-    stats["focus"] = render_cards.focus_specs(stats)
-    stats["featured"] = render_cards.featured_repos(repos)
+    stats["featured"] = render_paper_cards.featured_repos(repos)
 
     if spans["longest_start"] and spans["longest_end"]:
         stats["longest_label"] = (
@@ -130,11 +128,9 @@ def main() -> None:
             f"{spans['longest_end'].strftime('%b %-d')}"
         )
 
-    make_heatmap_svg.render(days, stats["login"], os.path.join(ASSETS, "contrib-heatmap.svg"))
     make_banner_svg.render(stats, os.path.join(ASSETS, "banner.svg"))
     make_achievements_svg.render(stats, os.path.join(ASSETS, "achievements.svg"))
     make_badges_svg.render(stats, os.path.join(ASSETS, "badges.svg"))
-    cards_written = render_cards.render_all(stats, os.path.join(ASSETS, "cards"))
     cards.render_stats(stats, os.path.join(ASSETS, "stats.svg"))
     try:
         # A photo dropped in assets/photo.* beats the avatar: the avatar is only
@@ -152,6 +148,10 @@ def main() -> None:
         print(f"ok: portrait rebuilt from {os.path.basename(photo) if photo else 'the profile picture'}")
     except Exception as exc:  # keep the previous portrait rather than fail the build
         print(f"skip: portrait not rebuilt ({exc})")
+    portrait_text = open(os.path.join(ASSETS, "portrait.svg"), encoding="utf-8").read()
+    cards_written = render_paper_cards.render_all(
+        stats, days, portrait_text, os.path.join(ASSETS, "cards")
+    )
     with open(os.path.join(ASSETS, "data.json"), "w", encoding="utf-8") as fh:
         json.dump(stats, fh, indent=2)
 
