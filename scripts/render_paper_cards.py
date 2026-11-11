@@ -64,7 +64,14 @@ CSS = """
 .nu{transform-box:fill-box;animation:nudgeup 1.8s ease-in-out infinite}
 .ti{opacity:0;transform-box:fill-box;transform-origin:50% 60%;animation:tilein 1.1s cubic-bezier(.2,.8,.2,1) both}
 .sh{animation:sheen 5s ease-in-out infinite}
-@media (prefers-reduced-motion: reduce){.r,.f,.g,.p,.live,.nu,.ti{animation:none!important;opacity:1!important;transform:none!important}.sh{display:none}}
+/* Hover rules below only fire when the SVG is inlined or opened directly. Inside an img element, which is
+   how GitHub renders a README image, the document has no pointer, so these are a bonus, not the
+   effect you see on the profile. The breathing glow and the dot tint carry the colour there. */
+.portrait{transition:filter .35s ease}
+.portrait:hover{filter:drop-shadow(0 0 22px rgba(47,85,255,.55))}
+.breathe{animation:breathe 6s ease-in-out infinite}
+@keyframes breathe{0%,100%{opacity:.55}50%{opacity:1}}
+@media (prefers-reduced-motion: reduce){.r,.f,.g,.p,.live,.nu,.ti,.breathe{animation:none!important;opacity:1!important;transform:none!important}.sh{display:none}}
 """
 
 
@@ -151,10 +158,12 @@ def hero(stats, portrait_dots, out_dir):
     # The portrait is vector dots, scaled to fill the right block (520..848 wide, 46..330 tall).
     dots_markup, dots_w, dots_h = portrait_dots
     # Target box on the right of the hero: as tall as the card allows, without touching the name.
-    box_x, box_y, box_w, box_h = 464.0, 0.0, 416.0, 420.0
+    box_x, box_y, box_w, box_h = 502.0, 48.0, 344.0, 324.0
     scale = min(box_w / dots_w, box_h / dots_h)
     off_x = box_x + (box_w - dots_w * scale) / 2
     off_y = box_y + (box_h - dots_h * scale) / 2
+    box_cx = off_x + dots_w * scale / 2
+    box_cy = off_y + dots_h * scale / 2
     rows = (
         f'<g class="f" style="animation-delay:.25s" '
         f'transform="translate({off_x:.1f} {off_y:.1f}) scale({scale:.4f})">{dots_markup}</g>'
@@ -162,6 +171,16 @@ def hero(stats, portrait_dots, out_dir):
     body = f"""
 <defs>
   <clipPath id="heroClip"><rect width="{W}" height="420" rx="14"/></clipPath>
+  <linearGradient id="dotTint" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="{INK}"/>
+    <stop offset=".55" stop-color="#1b3fc9"/>
+    <stop offset="1" stop-color="{BLUE}"/>
+  </linearGradient>
+  <radialGradient id="dotGlow" cx=".5" cy=".42" r=".62">
+    <stop offset="0" stop-color="{BLUE}" stop-opacity=".22"/>
+    <stop offset=".62" stop-color="{BLUE}" stop-opacity=".07"/>
+    <stop offset="1" stop-color="{BLUE}" stop-opacity="0"/>
+  </radialGradient>
   <linearGradient id="shine" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="600" y2="0">
     <stop offset="0" stop-color="{INK}"/><stop offset=".42" stop-color="{INK}"/>
     <stop offset=".5" stop-color="{BLUE}"/><stop offset=".58" stop-color="{INK}"/>
@@ -178,14 +197,15 @@ def hero(stats, portrait_dots, out_dir):
 <text class="r" {d(0.15)} x="44" y="190" font-family="{SERIF}" font-size="96" letter-spacing="-2" fill="{INK}">{escape(first)}</text>
 <text class="r" {d(0.3)} x="44" y="282" font-family="{SERIF}" font-style="italic" font-size="96" letter-spacing="-2" fill="url(#shine)">{escape(second)}</text>
 <g class="r" {d(0.55)}>
-  {text_lines(48, 330, wrap(tagline, 40), 27, f'font-family="{SANS}" font-size="18" fill="{INK_SOFT}"')}
+  {text_lines(48, 326, wrap(tagline, 46), 26, f'font-family="{SANS}" font-size="17" fill="{INK_SOFT}"')}
 </g>
 <g class="f" {d(0.8)}>
-  <text x="48" y="392" font-family="{MONO}" font-size="13" fill="{INK}">withabubakar.netlify.app</text>
-  <text class="nu" x="272" y="392" font-family="{MONO}" font-size="13" fill="{BLUE}">&#8599;</text>
+  <text x="48" y="398" font-family="{MONO}" font-size="13" fill="{INK}">withabubakar.netlify.app</text>
+  <text class="nu" x="272" y="398" font-family="{MONO}" font-size="13" fill="{BLUE}">&#8599;</text>
 </g>
-<g clip-path="url(#heroClip)" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
-  {rows}
+<g class="portrait" clip-path="url(#heroClip)">
+  <ellipse class="breathe" cx="{box_cx:.1f}" cy="{box_cy:.1f}" rx="{box_w / 2:.1f}" ry="{box_h / 2:.1f}" fill="url(#dotGlow)"/>
+  <g fill="url(#dotTint)">{rows}</g>
 </g>
 """
     label = f"{stats.get('name')}. {tagline}"
