@@ -321,6 +321,23 @@ def activity(stats, out_dir):
     return _write(out_dir, "activity.svg", svg(W, h, body, ["serif", "serif-i", "sans", "mono"], label))
 
 
+def blurb(desc, limit=126):
+    """One paragraph that fits four lines at 34 characters.
+
+    Repo descriptions run long - threadmind-ai's is 199 characters - and printing them whole pushed
+    the copy straight onto the meta line. Cut on a clause boundary so it still reads like a sentence.
+    """
+    text = " ".join((desc or "").split())
+    if len(text) <= limit:
+        return text
+    cut = text[:limit]
+    for sep in (". ", ", ", " - ", " ", ):
+        idx = cut.rfind(sep)
+        if idx > limit * 0.55:
+            return cut[:idx].rstrip(", -") + "\u2026"
+    return cut.rstrip(" ,-") + "\u2026"
+
+
 def repo_card(index, name, desc, meta, color, out_dir):
     delay = 4.6 + index * 0.12
     body = f"""
@@ -328,7 +345,7 @@ def repo_card(index, name, desc, meta, color, out_dir):
 <g class="r" {d(delay)}>
   <rect x="24" y="30" width="8" height="8" rx="2" fill="{color}"/>
   <text x="40" y="39" font-family="{SANS}" font-weight="600" font-size="18" fill="{INK}">{escape(name)}</text>
-  {text_lines(24, 72, wrap(desc, 34), 21, f'font-family="{SANS}" font-size="14" fill="{INK_SOFT}"')}
+  {text_lines(24, 72, wrap(blurb(desc), 34)[:4], 21, f'font-family="{SANS}" font-size="14" fill="{INK_SOFT}"')}
   <text x="24" y="{REPO_H - 24}" font-family="{MONO}" font-size="12" fill="{MUTED}">{escape(meta)}</text>
 </g>
 """

@@ -149,6 +149,46 @@ def _card(name: str, svg: str) -> list[str]:
         problems.append(f"cards/{name}: canvas {w}x{h}, expected {want_w}x{want_h}")
     if not svg.rstrip().endswith("</svg>"):
         problems.append(f"cards/{name}: truncated file (no closing </svg>)")
+    # count_up() emits one <text> per animation frame and toggles their opacity, so those runs sit
+    # at the same coordinates on purpose. They are excluded from the collision check.
+    seen: set[tuple[str, str, str]] = set()
+    runs = []
+    for a, b in _texts(svg):
+        text = _plain(b)
+        if not text:
+            continue
+        key = (a.get("x", ""), a.get("y", ""), text)
+        if key in seen:  # duplicate of an animation frame, already counted once
+            continue
+        seen.add(key)
+        runs.append((a, text))
+    # Two lines sharing a column must not sit on the same baseline. This is the check that would have
+    # caught the repo cards printing five lines of copy on top of the meta line.
+    for i in range(len(runs)):
+        for j in range(i + 1, len(runs)):
+            (a1, t1), (a2, t2) = runs[i], runs[j]
+            if "y" not in a1 or "y" not in a2 or "x" not in a1 or "x" not in a2:
+                continue
+            if abs(float(a1["x"]) - float(a2["x"])) > 2:
+                continue
+            # Each run owns a band around its baseline: ascent above, descender below. Overlap is
+            # when two bands intersect, which is stricter and fairer than comparing baselines - a
+            # 40px number with its 13px caption underneath is 24px apart and fine.
+            def band(attrs) -> tuple[float, float]:
+                size = float(attrs.get("font-size", 0))
+                y = float(attrs["y"])
+                # Display sizes are set tight - 96px lines 92 apart is deliberate. Body sizes get a
+                # fuller box, which is where collisions actually happen.
+                up, down = (0.62, 0.10) if size >= 24 else (0.78, 0.22)
+                return y - up * size, y + down * size
+
+            top1, bot1 = band(a1)
+            top2, bot2 = band(a2)
+            if top2 < bot1 - 0.5 and top1 < bot2 - 0.5:
+                problems.append(
+                    f"cards/{name}: '{t1[:22]}' and '{t2[:22]}' collide on the same baseline column"
+                )
+
     for attrs, body in _texts(svg):
         text = _plain(body)
         if not text or "x" not in attrs or not attrs.get("font-size"):
