@@ -9,11 +9,11 @@
 <text x="1252.0" y="22.5" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10.5" fill="#484f58" text-anchor="end">--all-time</text>
 <rect x="28.0" y="54" width="194.0" height="96" rx="8" fill="#161b22" stroke="#30363d"/>
 <text x="40.0" y="76.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10" fill="#8b949e">$ contributions</text>
-<text x="40.0" y="110.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="24" fill="#e6edf3" font-weight="700">952</text>
+<text x="40.0" y="110.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="24" fill="#e6edf3" font-weight="700">954</text>
 <text x="88.2" y="110.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10" fill="#484f58">last 12 months</text>
 <text x="40.0" y="128.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="9" fill="#484f58">next 1,000</text>
 <rect x="40.0" y="142" width="170.0" height="3" rx="1.5" fill="#484f58" opacity="0.55"/>
-<rect x="40.0" y="142" width="161.8" height="3" rx="1.5" fill="#39d353"/>
+<rect x="40.0" y="142" width="162.2" height="3" rx="1.5" fill="#39d353"/>
 <rect x="234.0" y="54" width="194.0" height="96" rx="8" fill="#161b22" stroke="#30363d"/>
 <text x="246.0" y="76.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10" fill="#8b949e">$ active days</text>
 <text x="246.0" y="110.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="24" fill="#e6edf3" font-weight="700">266</text>
@@ -42,11 +42,11 @@
 <rect x="864.0" y="142" width="170.0" height="3" rx="1.5" fill="#484f58" opacity="0.55"/>
 <rect x="1058.0" y="54" width="194.0" height="96" rx="8" fill="#161b22" stroke="#30363d"/>
 <text x="1070.0" y="76.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10" fill="#8b949e">$ commits</text>
-<text x="1070.0" y="110.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="24" fill="#e6edf3" font-weight="700">872</text>
+<text x="1070.0" y="110.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="24" fill="#e6edf3" font-weight="700">842</text>
 <text x="1118.2" y="110.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10" fill="#484f58">last 12 months</text>
 <text x="1070.0" y="128.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="9" fill="#484f58">next 1,000</text>
 <rect x="1070.0" y="142" width="170.0" height="3" rx="1.5" fill="#484f58" opacity="0.55"/>
-<rect x="1070.0" y="142" width="148.2" height="3" rx="1.5" fill="#39d353"/>
+<rect x="1070.0" y="142" width="143.1" height="3" rx="1.5" fill="#39d353"/>
 <rect x="28.0" y="162" width="194.0" height="96" rx="8" fill="#161b22" stroke="#30363d"/>
 <text x="40.0" y="184.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10" fill="#8b949e">$ repositories</text>
 <text x="40.0" y="218.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="24" fill="#e6edf3" font-weight="700">68</text>
@@ -56,11 +56,11 @@
 <rect x="40.0" y="250" width="154.1" height="3" rx="1.5" fill="#39d353"/>
 <rect x="234.0" y="162" width="194.0" height="96" rx="8" fill="#161b22" stroke="#30363d"/>
 <text x="246.0" y="184.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10" fill="#8b949e">$ merged PRs</text>
-<text x="246.0" y="218.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="24" fill="#e6edf3" font-weight="700">10</text>
+<text x="246.0" y="218.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="24" fill="#e6edf3" font-weight="700">11</text>
 <text x="279.8" y="218.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10" fill="#484f58">all time</text>
-<text x="246.0" y="236.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="9" fill="#484f58">12 opened this year</text>
+<text x="246.0" y="236.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="9" fill="#484f58">13 opened this year</text>
 <rect x="246.0" y="250" width="170.0" height="3" rx="1.5" fill="#484f58" opacity="0.55"/>
-<rect x="246.0" y="250" width="68.0" height="3" rx="1.5" fill="#39d353"/>
+<rect x="246.0" y="250" width="74.8" height="3" rx="1.5" fill="#39d353"/>
 <rect x="440.0" y="162" width="194.0" height="96" rx="8" fill="#161b22" stroke="#30363d"/>
 <text x="452.0" y="184.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10" fill="#8b949e">$ issues opened</text>
 <text x="452.0" y="218.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="24" fill="#e6edf3" font-weight="700">20</text>
@@ -83,9 +83,9 @@
 <rect x="864.0" y="250" width="170.0" height="3" rx="1.5" fill="#484f58" opacity="0.55"/>
 <rect x="1058.0" y="162" width="194.0" height="96" rx="8" fill="#161b22" stroke="#30363d"/>
 <text x="1070.0" y="184.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10" fill="#8b949e">$ PRs opened</text>
-<text x="1070.0" y="218.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="24" fill="#e6edf3" font-weight="700">12</text>
+<text x="1070.0" y="218.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="24" fill="#e6edf3" font-weight="700">13</text>
 <text x="1103.8" y="218.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10" fill="#484f58">last 12 months</text>
-<text x="1070.0" y="236.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="9" fill="#484f58">10 merged</text>
+<text x="1070.0" y="236.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="9" fill="#484f58">11 merged</text>
 <rect x="1070.0" y="250" width="170.0" height="3" rx="1.5" fill="#484f58" opacity="0.55"/>
 <line x1="28" y1="268" x2="1252" y2="268" stroke="#30363d"/>
 <text x="28.0" y="294.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10" fill="#8b949e">computed from the GitHub API · no badges, just numbers</text>
