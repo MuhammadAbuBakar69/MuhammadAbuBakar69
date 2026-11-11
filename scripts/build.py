@@ -20,6 +20,7 @@ import cards  # noqa: E402
 import make_ascii_svg  # noqa: E402
 import make_achievements_svg  # noqa: E402
 import make_badges_svg  # noqa: E402
+import make_dot_portrait  # noqa: E402
 import render_paper_cards  # noqa: E402
 import make_banner_svg  # noqa: E402
 
@@ -141,6 +142,7 @@ def main() -> None:
             None,
         )
         source = open(photo, "rb").read() if photo else gh.get_avatar(user["avatar_url"])
+        stats["dots"] = make_dot_portrait.dot_group(source)
         portrait = make_ascii_svg.to_ascii_lines(source)
         cards.render_portrait(
             portrait, stats["name"], stats["login"], os.path.join(ASSETS, "portrait.svg"), stats
@@ -148,9 +150,8 @@ def main() -> None:
         print(f"ok: portrait rebuilt from {os.path.basename(photo) if photo else 'the profile picture'}")
     except Exception as exc:  # keep the previous portrait rather than fail the build
         print(f"skip: portrait not rebuilt ({exc})")
-    portrait_text = open(os.path.join(ASSETS, "portrait.svg"), encoding="utf-8").read()
     cards_written = render_paper_cards.render_all(
-        stats, days, portrait_text, os.path.join(ASSETS, "cards")
+        stats, days, stats["dots"], os.path.join(ASSETS, "cards")
     )
     with open(os.path.join(ASSETS, "data.json"), "w", encoding="utf-8") as fh:
         json.dump(stats, fh, indent=2)

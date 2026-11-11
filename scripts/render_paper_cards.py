@@ -144,16 +144,14 @@ def count_up(num, word, x, y, attrs, begin, dur=1.1, frames=18):
     return "".join(out)
 
 
-def hero(stats, portrait_rows, out_dir):
+def hero(stats, portrait_dots, out_dir):
     first, *rest = (stats.get("name") or stats["login"]).split(" ", 1)
     second = rest[0] if rest else ""
     tagline = "I build AI products that ship: agents, RAG pipelines, and the web apps around them."
-    rows = "".join(
-        f'<text class="f" style="animation-delay:{0.25 + i * 0.018:.3f}s;animation-duration:.35s" '
-        f'xml:space="preserve" x="20" y="{7 + i * 7.2:.1f}" fill="{INK}" font-size="7.2" '
-        f'textLength="800" lengthAdjust="spacing">{escape(row)}</text>'
-        for i, row in enumerate(portrait_rows)
-    )
+    # The portrait is vector dots, scaled to fill the right block (520..848 wide, 46..330 tall).
+    dots_markup, dots_w, dots_h = portrait_dots
+    scale = min(328.0 / dots_w, 284.0 / dots_h)
+    rows = f'<g class="f" style="animation-delay:.25s" transform="translate(520 46) scale({scale:.4f})">{dots_markup}</g>' 
     body = f"""
 <defs>
   <linearGradient id="shine" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="600" y2="0">
@@ -422,9 +420,8 @@ def portrait_rows_from(svg_text):
     return [row for row in rows if row.strip()]
 
 
-def render_all(stats, days, portrait_svg_text, out_dir):
-    rows = portrait_rows_from(portrait_svg_text)
-    written = [hero(stats, rows, out_dir)]
+def render_all(stats, days, portrait_dots, out_dir):
+    written = [hero(stats, portrait_dots, out_dir)]
     written.append(
         tile("focus-build", "BUILD", BLUE, "#ffffff", str(stats["repos"]), "repos",
              "Production web apps in React, Next.js and TypeScript, shipped and maintained.", 3.1, 0, out_dir)
