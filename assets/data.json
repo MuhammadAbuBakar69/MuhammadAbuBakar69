@@ -1,16 +1,16 @@
 {
   "login": "MuhammadAbuBakar69",
   "name": "Muhammad Abu-Bakar",
-  "contributions": 981,
+  "contributions": 985,
   "current_streak": 1,
   "longest_streak": 31,
-  "repos": 70,
+  "repos": 71,
   "stars": 4,
   "followers": 0,
   "languages": {
+    "JavaScript": 40,
     "Python": 4,
     "TypeScript": 7,
-    "JavaScript": 39,
     "HTML": 10,
     "CSS": 4
   },
@@ -44,23 +44,23 @@
       "url": "https://github.com/MuhammadAbuBakar69/Festivity"
     },
     {
+      "name": "ask-abubakar",
+      "description": "Ask about Muhammad Abu-Bakar and his repositories. Answers are retrieved from public repo data and cite their source.",
+      "language": "JavaScript",
+      "stars": 0,
+      "url": "https://github.com/MuhammadAbuBakar69/ask-abubakar"
+    },
+    {
       "name": "MuhammadAbuBakar69",
       "description": "Auto-refreshing profile art: SVG cards, a halftone portrait and a contribution heatmap generated from the GitHub API every day.",
       "language": "Python",
       "stars": 0,
       "url": "https://github.com/MuhammadAbuBakar69/MuhammadAbuBakar69"
-    },
-    {
-      "name": "growthpilot-ai",
-      "description": "Growth analysis for one real business: a scored diagnosis across 7 dimensions, 19 page checks, and a check of your answers against your own page. Local-first, no account.",
-      "language": "TypeScript",
-      "stars": 0,
-      "url": "https://github.com/MuhammadAbuBakar69/growthpilot-ai"
     }
   ],
   "active_days": 266,
-  "total_days": 368,
-  "avg_active": 3.68796992481203,
+  "total_days": 369,
+  "avg_active": 3.7030075187969924,
   "best_day": {
     "count": 190,
     "label": "Aug 11"
@@ -124,19 +124,19 @@
     {
       "label": "N",
       "year": 2026,
-      "count": 115
+      "count": 119
     }
   ],
   "current_start": "2026-11-11",
   "current_end": "2026-11-11",
   "longest_start": "2026-04-26",
   "longest_end": "2026-05-26",
-  "built": "2026-11-11",
+  "built": "2026-11-12",
   "work": {
     "merged_prs": 13,
     "issues": 20,
     "followers": 0,
-    "commits_year": 865,
+    "commits_year": 867,
     "prs_year": 15,
     "reviews_year": 0
   },
