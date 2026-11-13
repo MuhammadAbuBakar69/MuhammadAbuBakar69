@@ -2,14 +2,14 @@
   "login": "MuhammadAbuBakar69",
   "name": "Muhammad Abu-Bakar",
   "contributions": 985,
-  "current_streak": 1,
+  "current_streak": 0,
   "longest_streak": 31,
   "repos": 71,
   "stars": 4,
   "followers": 0,
   "languages": {
-    "JavaScript": 40,
     "Python": 4,
+    "JavaScript": 40,
     "TypeScript": 7,
     "HTML": 10,
     "CSS": 4
@@ -44,22 +44,22 @@
       "url": "https://github.com/MuhammadAbuBakar69/Festivity"
     },
     {
-      "name": "ask-abubakar",
-      "description": "Ask about Muhammad Abu-Bakar and his repositories. Answers are retrieved from public repo data and cite their source.",
-      "language": "JavaScript",
-      "stars": 0,
-      "url": "https://github.com/MuhammadAbuBakar69/ask-abubakar"
-    },
-    {
       "name": "MuhammadAbuBakar69",
       "description": "Auto-refreshing profile art: SVG cards, a halftone portrait and a contribution heatmap generated from the GitHub API every day.",
       "language": "Python",
       "stars": 0,
       "url": "https://github.com/MuhammadAbuBakar69/MuhammadAbuBakar69"
+    },
+    {
+      "name": "ask-abubakar",
+      "description": "Ask about Muhammad Abu-Bakar and his repositories. Answers are retrieved from public repo data and cite their source.",
+      "language": "JavaScript",
+      "stars": 0,
+      "url": "https://github.com/MuhammadAbuBakar69/ask-abubakar"
     }
   ],
   "active_days": 266,
-  "total_days": 369,
+  "total_days": 370,
   "avg_active": 3.7030075187969924,
   "best_day": {
     "count": 190,
@@ -127,11 +127,11 @@
       "count": 119
     }
   ],
-  "current_start": "2026-11-11",
-  "current_end": "2026-11-11",
+  "current_start": null,
+  "current_end": null,
   "longest_start": "2026-04-26",
   "longest_end": "2026-05-26",
-  "built": "2026-11-12",
+  "built": "2026-11-13",
   "work": {
     "merged_prs": 13,
     "issues": 20,

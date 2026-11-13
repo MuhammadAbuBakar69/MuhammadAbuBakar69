@@ -60,8 +60,8 @@ Kept, not shown: the terminal-era panels. Uncomment to bring any of them back.
 | **[booking-system](https://github.com/MuhammadAbuBakar69/booking-system)** | Booking system with calendar and availability | JavaScript | 1 |
 | **[github-analyzer](https://github.com/MuhammadAbuBakar69/github-analyzer)** | GitHub profile analyzer with stats via GitHub API | JavaScript | 1 |
 | **[Festivity](https://github.com/MuhammadAbuBakar69/Festivity)** | Awwward Winning Website | CSS | 1 |
-| **[ask-abubakar](https://github.com/MuhammadAbuBakar69/ask-abubakar)** | Ask about Muhammad Abu-Bakar and his repositories. Answers are retrieved from public re... | JavaScript | 0 |
 | **[MuhammadAbuBakar69](https://github.com/MuhammadAbuBakar69/MuhammadAbuBakar69)** | Auto-refreshing profile art: SVG cards, a halftone portrait and a contribution heatmap... | Python | 0 |
+| **[ask-abubakar](https://github.com/MuhammadAbuBakar69/ask-abubakar)** | Ask about Muhammad Abu-Bakar and his repositories. Answers are retrieved from public re... | JavaScript | 0 |
 
 <!-- featured:end -->
 

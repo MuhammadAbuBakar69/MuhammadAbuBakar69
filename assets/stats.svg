@@ -9,9 +9,9 @@
 <text x="442.0" y="22.5" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10.5" fill="#484f58" text-anchor="end">--12mo</text>
 <rect x="18" y="50" width="207" height="66" rx="8" fill="#11161d" stroke="#30363d"/>
 <text x="30.0" y="69.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10.5" fill="#8b949e">$ current streak</text>
-<text x="30.0" y="92.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="20" fill="#e6edf3" font-weight="600">1</text>
+<text x="30.0" y="92.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="20" fill="#e6edf3" font-weight="600">0</text>
 <text x="44.0" y="92.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="13" fill="#8b949e">d</text>
-<text x="30.0" y="108.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="9.5" fill="#484f58">Nov 11</text>
+<text x="30.0" y="108.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="9.5" fill="#484f58">none today</text>
 <rect x="235" y="50" width="207" height="66" rx="8" fill="#11161d" stroke="#30363d"/>
 <text x="247.0" y="69.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10.5" fill="#8b949e">$ longest streak</text>
 <text x="247.0" y="92.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="20" fill="#e6edf3" font-weight="600">31</text>
@@ -24,7 +24,7 @@
 <rect x="235" y="124" width="207" height="66" rx="8" fill="#11161d" stroke="#30363d"/>
 <text x="247.0" y="143.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10.5" fill="#8b949e">$ active days</text>
 <text x="247.0" y="166.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="20" fill="#e6edf3" font-weight="600">266</text>
-<text x="285.0" y="166.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="13" fill="#8b949e"> / 369</text>
+<text x="285.0" y="166.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="13" fill="#8b949e"> / 370</text>
 <text x="247.0" y="182.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="9.5" fill="#484f58">72% of the year</text>
 <rect x="18" y="198" width="207" height="66" rx="8" fill="#11161d" stroke="#30363d"/>
 <text x="30.0" y="217.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="10.5" fill="#8b949e">$ best day</text>
@@ -64,5 +64,5 @@
 <line x1="18" y1="470" x2="442" y2="470" stroke="#30363d"/>
 <line x1="18" y1="516" x2="442" y2="516" stroke="#30363d"/>
 <text x="18.0" y="534.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="9.5" fill="#484f58">auto-refreshed daily · 985 contributions / 12 months</text>
-<text x="442.0" y="534.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="9.5" fill="#484f58" text-anchor="end">built 2026-11-12</text>
+<text x="442.0" y="534.0" font-family="ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="9.5" fill="#484f58" text-anchor="end">built 2026-11-13</text>
 </svg>
