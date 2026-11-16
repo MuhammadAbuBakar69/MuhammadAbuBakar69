@@ -59,7 +59,7 @@
     }
   ],
   "active_days": 260,
-  "total_days": 365,
+  "total_days": 366,
   "avg_active": 3.7576923076923077,
   "best_day": {
     "count": 190,
@@ -131,12 +131,12 @@
   "current_end": null,
   "longest_start": "2026-04-26",
   "longest_end": "2026-05-26",
-  "built": "2026-11-15",
+  "built": "2026-11-16",
   "work": {
     "merged_prs": 13,
     "issues": 20,
     "followers": 0,
-    "commits_year": 867,
+    "commits_year": 859,
     "prs_year": 15,
     "reviews_year": 0
   },
