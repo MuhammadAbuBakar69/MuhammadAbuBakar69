@@ -1,15 +1,15 @@
 {
   "login": "MuhammadAbuBakar69",
   "name": "Muhammad Abu-Bakar",
-  "contributions": 979,
-  "current_streak": 2,
+  "contributions": 998,
+  "current_streak": 3,
   "longest_streak": 31,
-  "repos": 71,
+  "repos": 72,
   "stars": 4,
   "followers": 0,
   "languages": {
+    "JavaScript": 41,
     "Python": 4,
-    "JavaScript": 40,
     "TypeScript": 7,
     "HTML": 10,
     "CSS": 4
@@ -44,23 +44,23 @@
       "url": "https://github.com/MuhammadAbuBakar69/Festivity"
     },
     {
+      "name": "flowmind-ai",
+      "description": "Build Intelligent Workflows. Automate Everything. Visual AI workflow automation and autonomous agent platform (n8n / Zapier / Make class) built on Base44.",
+      "language": "JavaScript",
+      "stars": 0,
+      "url": "https://github.com/MuhammadAbuBakar69/flowmind-ai"
+    },
+    {
       "name": "MuhammadAbuBakar69",
       "description": "Auto-refreshing profile art: SVG cards, a halftone portrait and a contribution heatmap generated from the GitHub API every day.",
       "language": "Python",
       "stars": 0,
       "url": "https://github.com/MuhammadAbuBakar69/MuhammadAbuBakar69"
-    },
-    {
-      "name": "ask-abubakar",
-      "description": "Ask about Muhammad Abu-Bakar and his repositories. Answers are retrieved from public repo data and cite their source.",
-      "language": "JavaScript",
-      "stars": 0,
-      "url": "https://github.com/MuhammadAbuBakar69/ask-abubakar"
     }
   ],
-  "active_days": 262,
-  "total_days": 367,
-  "avg_active": 3.736641221374046,
+  "active_days": 263,
+  "total_days": 368,
+  "avg_active": 3.79467680608365,
   "best_day": {
     "count": 190,
     "label": "Aug 11"
@@ -124,19 +124,19 @@
     {
       "label": "N",
       "year": 2026,
-      "count": 121
+      "count": 140
     }
   ],
   "current_start": "2026-11-16",
-  "current_end": "2026-11-17",
+  "current_end": "2026-11-18",
   "longest_start": "2026-04-26",
   "longest_end": "2026-05-26",
-  "built": "2026-11-17",
+  "built": "2026-11-18",
   "work": {
     "merged_prs": 13,
-    "issues": 20,
+    "issues": 31,
     "followers": 0,
-    "commits_year": 861,
+    "commits_year": 868,
     "prs_year": 15,
     "reviews_year": 0
   },
