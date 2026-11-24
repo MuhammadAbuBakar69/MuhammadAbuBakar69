@@ -1,16 +1,16 @@
 {
   "login": "MuhammadAbuBakar69",
   "name": "Muhammad Abu-Bakar",
-  "contributions": 991,
-  "current_streak": 8,
+  "contributions": 999,
+  "current_streak": 9,
   "longest_streak": 31,
-  "repos": 72,
+  "repos": 73,
   "stars": 4,
   "followers": 0,
   "languages": {
+    "TypeScript": 8,
     "JavaScript": 41,
     "Python": 4,
-    "TypeScript": 7,
     "HTML": 10,
     "CSS": 4
   },
@@ -44,23 +44,23 @@
       "url": "https://github.com/MuhammadAbuBakar69/Festivity"
     },
     {
+      "name": "Nexora-AI",
+      "description": "Nexora is an AI API management and usage tracking platform that enables businesses and developers to manage AI models, distribute API access, allocate token credits, monitor consumption, and control usage through centralized customer and admin dashboards.",
+      "language": "TypeScript",
+      "stars": 0,
+      "url": "https://github.com/MuhammadAbuBakar69/Nexora-AI"
+    },
+    {
       "name": "flowmind-ai",
       "description": "Build Intelligent Workflows. Automate Everything. Visual AI workflow automation and autonomous agent platform (n8n / Zapier / Make class) built on Base44.",
       "language": "JavaScript",
       "stars": 0,
       "url": "https://github.com/MuhammadAbuBakar69/flowmind-ai"
-    },
-    {
-      "name": "MuhammadAbuBakar69",
-      "description": "Auto-refreshing profile art: SVG cards, a halftone portrait and a contribution heatmap generated from the GitHub API every day.",
-      "language": "Python",
-      "stars": 0,
-      "url": "https://github.com/MuhammadAbuBakar69/MuhammadAbuBakar69"
     }
   ],
-  "active_days": 262,
-  "total_days": 366,
-  "avg_active": 3.782442748091603,
+  "active_days": 263,
+  "total_days": 367,
+  "avg_active": 3.7984790874524714,
   "best_day": {
     "count": 190,
     "label": "Aug 11"
@@ -124,19 +124,19 @@
     {
       "label": "N",
       "year": 2026,
-      "count": 147
+      "count": 155
     }
   ],
   "current_start": "2026-11-16",
-  "current_end": "2026-11-23",
+  "current_end": "2026-11-24",
   "longest_start": "2026-04-26",
   "longest_end": "2026-05-26",
-  "built": "2026-11-23",
+  "built": "2026-11-24",
   "work": {
     "merged_prs": 13,
     "issues": 31,
     "followers": 0,
-    "commits_year": 860,
+    "commits_year": 867,
     "prs_year": 15,
     "reviews_year": 0
   },

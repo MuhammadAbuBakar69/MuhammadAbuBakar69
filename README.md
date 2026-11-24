@@ -60,8 +60,8 @@ Kept, not shown: the terminal-era panels. Uncomment to bring any of them back.
 | **[booking-system](https://github.com/MuhammadAbuBakar69/booking-system)** | Booking system with calendar and availability | JavaScript | 1 |
 | **[github-analyzer](https://github.com/MuhammadAbuBakar69/github-analyzer)** | GitHub profile analyzer with stats via GitHub API | JavaScript | 1 |
 | **[Festivity](https://github.com/MuhammadAbuBakar69/Festivity)** | Awwward Winning Website | CSS | 1 |
+| **[Nexora-AI](https://github.com/MuhammadAbuBakar69/Nexora-AI)** | Nexora is an AI API management and usage tracking platform that enables businesses and... | TypeScript | 0 |
 | **[flowmind-ai](https://github.com/MuhammadAbuBakar69/flowmind-ai)** | Build Intelligent Workflows. Automate Everything. Visual AI workflow automation and aut... | JavaScript | 0 |
-| **[MuhammadAbuBakar69](https://github.com/MuhammadAbuBakar69/MuhammadAbuBakar69)** | Auto-refreshing profile art: SVG cards, a halftone portrait and a contribution heatmap... | Python | 0 |
 
 <!-- featured:end -->
 
